@@ -59,7 +59,7 @@ $$
 \widehat{\sigma}^2_{\mu\text{ known}} := \frac{1}{n} \sum_{i=1}^n \left( X_i - \mu \right)^2
 $$
 
-Replacing $n$ with $n - 1$ in the denominator might be viewed as a premium paid for not knowing the exact value of $\mu$. This point may seem vague for now. In the following sections, we make this intuition more precise.
+Replacing $n$ with $n - 1$ in the denominator might be viewed as a premium paid for not knowing the exact value of $\mu$. In the following sections, we try to make this intuition more precise.
 
 
 ### Orthogonal Projections
@@ -192,7 +192,7 @@ least reasonable if one is forced to make a judgement.
 To observe a similar effect for larger samples (namely, all measurements clustering
 together while remaining far from the true mean) we would need to be rather unlucky.
 This explains why replacing $\frac{1}{n}$ with $\frac{1}{n-1}$ becomes almost
-irrelevant for large $n$, but crucial when the sample is small.
+irrelevant for large $n$, but critical when the sample is small.
 
 
 
