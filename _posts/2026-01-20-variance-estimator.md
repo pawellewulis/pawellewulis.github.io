@@ -33,7 +33,7 @@ From time to time, someone in the room eventually asks:
 
 There are two answers one usually hears:
 
-1. Write down the bias $\mathbf{E}[\widehat{\sigma}^2] - \sigma^2$, expand the square, expand $\overline{X}$, expand all the sums, calculate. See? It’s $0$.
+1. Write down the bias $\mathbf{E}[\widehat{\sigma}^2] - \sigma^2$, expand the square, expand $\overline{X}$, expand all the sums, calculate. See? It's $0$.
 2. Because there are only $n-1$ degrees of freedom among the $X_i$, since translating all measurements by the same amount leaves the variance unchanged.
 
 The first answer is formally correct, but it explains little. The second one may feel hand-wavy. Why should degrees of freedom matter at all? Where, exactly, did the missing dimension go?
