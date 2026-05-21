@@ -36,11 +36,11 @@ To study demographic trends, we need a metric that is not 'contaminated' by life
 
 Ok, what about something like the number of births per 1,000 people in the past year? That surely solves the issue of recency mentioned above, right?
 
-This metric is called the ***(crude) birth rate*** (BR). Since both BR and TFR are supposed to capture general demographic trends, the two are quite frequently confused. Regardless, there are some serious caveats:
+This metric is called the ***(crude) birth rate*** (BR). Since both BR and TFR are supposed to detect general demographic trends, the two are frequently confused. Regardless of that, there are some serious caveats:
 
-- If we consider 'per 1,000 people' instead of 'per 1,000 women', we expose ourselves to the issue of skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).
+- If we consider 'per 1,000 people' instead of 'per 1,000 women', we may expose ourselves to skewed gender ratios. For example, in the United Arab Emirates ~64%, of the population are men (2026).
 
-- Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let's relocate everyone above the age of 60 to the Côte d'Azur or Spain. The BR suddenly improves, even though nothing changes about how many children women are willing to have. 
+- Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let's relocate everyone above the age of 60 to the Côte d'Azur or Spain. The BR suddenly improves, even though nothing has changed about how many children women are willing to have. 
 
 - Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we're all dead anyway.
 
@@ -172,7 +172,7 @@ Not quite, the main culprit is the ***sex ratio at birth***: more boys than girl
 
 In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability, which has an almost negigible effect on the overall replacement rate. In such a scenario, all one needs is to bump it up by another ~0.02-0.03 for good measure.
 
-The last remark here is that in many parts of the world premature mortality (especially infant mortality) remains a serious issue. In such cases, the *true* replacement rate can be much higher than 2.1.
+The last remark here is that in many parts of the world premature mortality (especially infant mortality) still remains a serious issue. In such cases, the *true* replacement rate can be much higher than 2.1.
 
 
 
