@@ -168,11 +168,11 @@ One could, of course, point out that the scenario I described is artificial and 
 
 ### **Myth 2:** Replacement rate is above 2.0 mainly because of premature mortality.
 
-Not quite, the main culprit is the ***sex ratio at birth***: more boys than girls are born, and the ratio is usually estimated at around 105/100. Therefore, to ensure full replacement (1 woman per 1 woman), roughly ~2.05 children must be born per woman on average. Even if no one died before the end of the reproductive age, the sex ratio at birth would still be fixed by nature itself.
+Not quite, the main culprit is the ***sex ratio at birth***: more boys than girls are born, and the ratio is usually estimated at around 105/100. To ensure full replacement (1 woman per 1 woman), roughly ~2.05 children must be born per woman on average. Even if no one died before the end of the reproductive age, the sex ratio at birth would still be hardwired by nature itself.
 
-In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability, which has only a small effect on the overall replacement rate. In such a scenario, all one needs is to bump it up by another ~0.02-0.03 for good measure.
+In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability, which has an almost negigible effect on the overall replacement rate. In such a scenario, all one needs is to bump it up by another ~0.02-0.03 for good measure.
 
-Of course, in many parts of the world premature mortality, especially infant mortality, remains a serious issue. In such cases, the *true* replacement rate can be much higher than 2.1.
+The last remark here is that in many parts of the world premature mortality (especially infant mortality) remains a serious issue. In such cases, the *true* replacement rate can be much higher than 2.1.
 
 
 
