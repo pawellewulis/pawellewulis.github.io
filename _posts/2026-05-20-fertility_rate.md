@@ -17,7 +17,7 @@ title: "Fertility Rates Are Tricky"
 
 In recent years, demography has become a hot topic in political debate. More and more countries describe their long-term trends as bad, with fewer children being born and populations aging rapidly.
 
-To quantify how bad 'bad' is, we use various metrics. The most widely used of these metrics is the ***total fertility rate*** (TFR) and it's possibly the best proxy we have for the expected number of children per woman. However, this statistic is also far trickier than many might assume.
+To quantify how bad 'bad' is, we use a lot of different metrics. The most widely used of them is the ***total fertility rate*** (TFR) and it's possibly the best proxy we've got for the expected number of children per woman. However, this statistic is also far trickier than many might assume.
 
 
 
