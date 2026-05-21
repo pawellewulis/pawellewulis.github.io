@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-05-22T00:04:52+02:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Fertility Rates Are Tricky</title><link href="http://localhost:4000/2026/05/20/fertility_rate.html" rel="alternate" type="text/html" title="Fertility Rates Are Tricky" /><published>2026-05-20T00:00:00+02:00</published><updated>2026-05-20T00:00:00+02:00</updated><id>http://localhost:4000/2026/05/20/fertility_rate</id><content type="html" xml:base="http://localhost:4000/2026/05/20/fertility_rate.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+  <img src="/assets/img/fertility_rate/tetmajer.png" alt="ASFR in Poland of 2014" style="width: 100%; display: block;" />
+  <figcaption style="font-size: 0.8em; color: #000;">
+    Włodzimierz Tetmajer, <em>The Artist's Family</em> (1905)
+  </figcaption>
+</figure>
+
+<p>In recent years, demography has become a hot topic in political debate. More and more countries describe their long-term trends as bad, with fewer children being born and populations aging rapidly.</p>
+
+<p>To quantify how bad ‘bad’ is, we use a lot of different metrics. The most widely used of them is the <strong><em>total fertility rate</em></strong> (TFR) and it’s possibly the best proxy we’ve got for the expected number of children per woman. However, this statistic is also far trickier than many might assume.</p>
+
+<h1 id="total-fertility-rate-what-it-is-and-isnt">Total fertility rate: what it is (and isn’t)</h1>
+
+<p>Before we present the full definition and motivation behind it, it’s better to first explain what TFR <em>is not</em>.</p>
+
+<h4 id="wrong-approach-1-just-take-the-average-number-of-children-per-woman">Wrong approach 1: Just take the average number of children per woman?</h4>
+
+<p>This idea falls apart fairly quickly. The number of children our mothers or grandmothers had doesn’t really tell us much about the likelihood that a woman of a certain age would consider having a child <em>now</em>.</p>
+
+<p>To study demographic trends, we need a metric that is not ‘contaminated’ by lifestyles, economic conditions, and decisions from many years ago.</p>
+
+<h4 id="wrong-approach-2-confusing-tfr-with-birth-rate">Wrong approach 2: Confusing TFR with Birth Rate</h4>
+
+<p>Ok, what about something like the number of births per 1,000 people in the past year? That surely solves the issue of recency mentioned above, right?</p>
+
+<p>This metric is called the <strong><em>(crude) birth rate</em></strong> (BR). Since both BR and TFR are supposed to capture general demographic trends, the two are quite frequently confused. Regardless, there are some serious caveats:</p>
+
+<ul>
+  <li>
+    <p>If we consider ‘per 1,000 people’ instead of ‘per 1,000 women’, we expose ourselves to the issue of skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).</p>
+  </li>
+  <li>
+    <p>Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let’s relocate everyone above the age of 60 to the Côte d’Azur or Spain. The BR suddenly improves, even though nothing changes about how many children women are willing to have.</p>
+  </li>
+  <li>
+    <p>Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we’re all dead anyway.</p>
+  </li>
+</ul>
+
+<h4 id="wrong-approach-3-confusing-tfr-with-gfr">Wrong approach 3: Confusing TFR with GFR</h4>
+
+<p>Ok, what if we focused on women of reproductive age instead? Such a metric is called the <strong><em>general fertility rate</em></strong> (GFR), which usually considers women between the ages of 15 and 49, at least according to the WHO. Unfortunately… problems:</p>
+
+<ul>
+  <li>
+    <p>One could argue the range is somewhat arbitrary, since a randomly chosen woman aged 48 is, statistically speaking, far less likely to give birth than one aged 28. We could assign some weights to each age group to account for that, but then, GFR would become convoluted and even more arbitrary.</p>
+  </li>
+  <li>
+    <p>Demographic ebb and flow. Let’s consider the average number of births to women of a particular age in a given country in a given year. This is called ASFR, or <strong><em>Age-Specific Fertility Rate</em></strong>. The idea here is that any significant shift in how childbearing is approached should be reflected in some noticeable changes in ASFR. It turns out, though, that GFR may move even if ASFRs remain constant across all the age groups.</p>
+  </li>
+</ul>
+<div style="height: 0.5em;"></div>
+<p><strong>Example.</strong> Imagine Country X where the likelihood of a woman of any given age having a child didn’t change at all between 1990 and 2010. For each age group the ASFR remains constant over time. However, the population age structure <em>might</em> change, which will distort GFR.</p>
+
+<figure style="max-width: 800px; text-align: center;">
+  <img src="/assets/img/fertility_rate/br_vs_tfr.png" alt="ASFR in Poland of 2014" style="width: 100%;" />
+  <figcaption style="font-size: 0.8em; color:  #000;">
+    Due to a past baby bust in Country X, there are fewer women aged 30 in 1990. Fifteen years later, a larger cohort reaches that age, increasing GFR from 56.5/1000 to 68.5/1000, even though the likelihood of having a child at each age remains unchanged.
+  </figcaption>
+</figure>
+
+<h4 id="actual-definition-of-tfr">Actual Definition of TFR</h4>
+
+<p>The last wrong approach taught us that we need a metric that won’t change if ASFRs remain fixed. The simplest thing we could do is to simply take the sum of all these values:</p>
+
+\[TFR := \sum_{\text{age}} ASFR(\text{age}).\]
+
+<p>Voilà. In the case described by the diagram above we get $TFR = 2.2$.</p>
+
+<p>The key advantage of TFR is that the number is easily interpretable. When we hear that Birth Rate of Country X is 19.4/1000, it’s not intuitively obvious if it’s a lot or not. On the other hand, the TFR of Country X being 2.2 immediately tells us that women are expected to have slightly more than two children on average.</p>
+
+<p>An interpretation of TFR I am quite fond of is the following:</p>
+
+<ul>
+  <li>Imagine a girl born in 2014 (say) who lives through the same year over and over again. Every time she reaches the end of the year, she returns to its beginning and experiences the same conditions. The average total number of children such time-travelling women would have is exactly what the TFR measures.</li>
+</ul>
+
+<p>This metric also has some weaknesses, but among the most popular choices this one is possibly the most robust.</p>
+
+<h1 id="demographic-mythology">Demographic mythology</h1>
+
+<p>In fires of failed experiments and doubts we forged a metric that satisfies several conditions we desire:</p>
+
+<p>1) It is not contaminated by information from the distant past.</p>
+
+<p>2) It can’t be skewed by over- or underrepresentation of certain age cohorts.</p>
+
+<p>3) It’s easy to interpret…</p>
+
+<p>…but alas, even TFR prepared some pitfalls for us. The following three misconceptions are the ones I encountered most often.</p>
+
+<h3 id="myth-1-if-tfr-sits-below-21-then-the-population-of-a-country-decreases"><strong>Myth 1:</strong> If TFR sits below ~2.1, then the population of a country decreases.</h3>
+
+<p>The value of 2.1 refers to what’s called the <strong><em>replacement rate</em></strong>. I admit the title of this section is a bit provocative, because it’s not really a myth… at least not in the long run! And it might take decades before we see any ‘long run’. It turns out that, locally, many interesting and counterintuitive scenarios may occur.</p>
+
+<p>Let us begin by stating the obvious:</p>
+
+\[\Delta \text{Population} = \text{Births} - \text{Deaths} + \text{Net Migration}.\]
+
+<p>If we forget about the migration effects, then the population grows simply if more people are born than die. As a consequence, if a certain country is young on average, then to get $\Delta \text{Population} &gt; 0$ we don’t even need that many births if the number of deaths stays low.</p>
+
+<p><strong>Example.</strong> Consider a country called Imaginationland. It satisfies a few conditions:</p>
+
+<ul>
+  <li>
+    <p>In year 2000 it was <strong>occupied only by people of age 40 or younger</strong>. In each age group there were exactly 100,000 of both women and men.</p>
+  </li>
+  <li>
+    <p>We have $TFR = 1.0$. <strong>The ASFR curve is simplified</strong> to two straight lines between the ages of 15 and 45 with a peak at 30.</p>
+  </li>
+  <li>
+    <p>To make the model cleaner, <strong>no one before the age of 60 ever dies</strong> in Imaginationland.</p>
+  </li>
+  <li>
+    <p>The crucial assumption anyone designing any model loves the most: <strong>we assume that no parameter determining the evolution ever changes!</strong></p>
+  </li>
+</ul>
+
+<!-- <figure style="max-width: 800px; text-align: center;">
+  <img src="/assets/img/fertility_rate/youngpop.gif"
+     onclick="this.src=this.src"
+     alt="Imaginationland Simulation"
+     style="max-width: 800px; width: 100%; display: block; cursor: pointer;">
+  <figcaption style="font-size: 0.8em; color:  #000;">
+    
+  </figcaption>
+</figure> -->
+
+<figure style="max-width: 1100px; text-align: center; margin: auto;">
+  <video controls="" loop="" playsinline="" preload="metadata" style="
+      width: 100%;
+      display: block;
+      margin: 1.5em auto;
+      background: transparent;
+    ">
+    <source src="/assets/img/fertility_rate/youngpop.mp4" type="video/mp4" />
+  </video>
+  <figcaption style="font-size: 0.8em; color: #000;">
+    Under our assumptions, the population of Imaginationland still grows for over 30 years despite its TFR being very low.
+  </figcaption>
+</figure>
+<div style="height: 0.5em;"></div>
+
+<p>The temporary increase in population despite low TFR is called <strong><em>demographic momentum</em></strong>. As the example above shows, this period may last even a few decades before a country finally reaches the state of demographic freefall.</p>
+
+<p>One could, of course, point out that the scenario I described is artificial and simplified beyond what reality has to offer. However, as the picture below shows, the demographic momentum is actually the norm rather than the exception:</p>
+
+<figure style="max-width: 800px; text-align: center;">
+  <img src="/assets/img/fertility_rate/tfr_vs_popgro.png" alt="TFR and Pop Growth" style="width: 100%;" />
+  <figcaption style="font-size: 0.8em; color:  #000;">
+    In large countries with TFR below the replacement rate, the population is often still growing, due to demographic momentum. Although we observe a neat linear relationship between TFR and population growth, it primarily reflects short-term dynamics. In the long run, the entire line is expected to shift downward. The ten largest deviations from the fitted line have been highlighted.
+    <br />
+    <em>Data source: World Bank.</em>
+  </figcaption>
+</figure>
+
+<h3 id="myth-2-replacement-rate-is-above-20-mainly-because-of-premature-mortality"><strong>Myth 2:</strong> Replacement rate is above 2.0 mainly because of premature mortality.</h3>
+
+<p>Not quite, the main culprit is the <strong><em>sex ratio at birth</em></strong>: more boys than girls are born, and the ratio is usually estimated at around 105/100. To ensure full replacement (1 woman per 1 woman), roughly ~2.05 children must be born per woman on average. Even if no one died before the end of the reproductive age, the sex ratio at birth would still be hardwired by nature itself.</p>
+
+<p>In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability, which has an almost negigible effect on the overall replacement rate. In such a scenario, all one needs is to bump it up by another ~0.02-0.03 for good measure.</p>
+
+<p>The last remark here is that in many parts of the world premature mortality (especially infant mortality) remains a serious issue. In such cases, the <em>true</em> replacement rate can be much higher than 2.1.</p>
+
+<h3 id="myth-3-persistently-low-fertility-rates-eventually-lead-to-a-self-reinforcing-aging-spiral"><strong>Myth 3:</strong> Persistently low fertility rates eventually lead to a self-reinforcing aging spiral.</h3>
+
+<p>This one is a bit difficult to state cleanly, but there is a fairly common misconception that stems from the following intuition: fewer people are born, which leads to fewer young people working and having children in the future, which in turn leads to even fewer children in the future-future, and so on. A relentless demographic march of the elderly.</p>
+
+<p>The issue is that the number of elderly people also shrinks proportionally over time.</p>
+
+<p>Even if the total population must decrease in the long run, the <em>shape</em> of the population pyramid eventually stabilizes anyway (in the next section I explain why this happens).</p>
+
+<p>Below I demonstrate this effect by simulating how the population pyramid of Poland evolves starting from 2014. Again, we must make two rather brave assumptions:</p>
+
+<ul>
+  <li>
+    <p><strong>Brave Assumption 1.</strong> All the parameters driving the evolution of the system remain unchanged for the next 200 years.</p>
+  </li>
+  <li>
+    <p><strong>Brave Assumption 2.</strong> Net migration is zero across all age groups and for both sexes.</p>
+  </li>
+</ul>
+
+<p>The goal is to demonstrate the underlying mechanisms, so we need to make compromises with reality.</p>
+
+<figure style="max-width: 1100px; text-align: center; margin: auto;">
+  <video controls="" loop="" playsinline="" preload="metadata" style="
+      width: 100%;
+      display: block;
+      margin: 1.5em auto;
+      background: transparent;
+    ">
+    <source src="/assets/img/fertility_rate/Poland_200y.mp4" type="video/mp4" />
+  </video>
+  <figcaption style="font-size: 0.8em; color: #000;">
+    We observe how the fraction of people aged 60 and above quickly reaches ~40% and then remains stable forever.
+    <br />
+    <em>Data source: Statistics Poland.</em>
+  </figcaption>
+</figure>
+<div style="height: 0.5em;"></div>
+
+<p>We notice that in 2014, the pyramid has a rather irregular shape, which gradually smooths out over time. The reason is that societies usually shift too quickly for what we call the ‘long term’ to ever truly materialize. It takes almost 100 years of simulation before the convergence becomes clearly visible. Social and economic changes, historical events, technological advancements, etc., simply never allow the system to settle for that long.</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <strong>Technical Remark.</strong>
+  The simulation starts in 2014 rather than something more recent to allow for a simple sanity check. In 2014, around 22% of the Polish population was aged 60 or above. Ten years later, the number grew to 26.6%. Our little simulation predicted 27.5%. Not quite a bullseye, but at least we seem to be in roughly the right ballpark.
+</div>
+
+<h1 id="modelling-demographic-trends">Modelling demographic trends</h1>
+
+<p>In this section I’ll briefly cover how I generated the simulations discussed in this post. Given some population to study we need the following ingredients:</p>
+
+<ul>
+  <li>
+    <p>Numbers of men and women for each age group.</p>
+  </li>
+  <li>
+    <p>Survivorship curve for both sexes. From this we can infer the probability of a person surviving the next year depending on age and sex. If by $M_{\text{age},t}$ we denote the number of men of some specific age at time $t$, we could have for example:</p>
+  </li>
+</ul>
+
+\[M_{35,t+1}  = M_{34,t} \times  
+  \mathbf{P}( 34 \rightarrow 35 \mid \text{M}).\]
+
+<ul>
+  <li>
+    <p>Sex ratio at birth. I estimated it using the data on Poland of 2014. It turned out that 
+$\mathbf{P}(\text{Girl}) \approx 48.557\%$.</p>
+  </li>
+  <li>
+    <p>ASFR for each age group. Together with the values of $W_{\text{age},t}$ (analogous to $M_{\text{age},t}$ but for women), this gives the formulae for the number of newborns the next year:</p>
+  </li>
+</ul>
+
+\[\begin{align}
+     W_{0,t+1} &amp;= \sum_{\text{age}} W_{\text{age},t} \times ASFR(\text{age}) \times \mathbf{P}(\text{Girl}), \\
+     M_{0,t+1} &amp;= \sum_{\text{age}} W_{\text{age},t} \times ASFR(\text{age}) \times \mathbf{P}(\text{Boy}).
+  \end{align}\]
+
+<p>For a simple simulation, that’s all! Pushing it by a single year can be summarized on the following graph:</p>
+
+<figure style="max-width: 800px; text-align: center;">
+  <img src="/assets/img/fertility_rate/graph.png" alt="TFR and Pop Growth" style="width: 100%;" />
+  <!-- <figcaption style="font-size: 0.8em; color:  #000;">
+  </figcaption> -->
+</figure>
+
+<p>Mathematically speaking, this graph represents a certain flow. Since all edge weights are constant, it behaves similarly to a Markov chain and can therefore be viewed as a linear transformation known as the <strong><em>Leslie matrix</em></strong>. In our simulations we consider men and women aged 0 to 110, so the population vector fed into this matrix has length 220.</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <strong>So why does the population pyramid from Myth 3 stabilize?</strong>
+    If we apply this transformation repeatedly, the flow eventually becomes dominated by the eigenvector corresponding to the largest eigenvalue of the Leslie matrix. The existence of a dominant positive eigenvalue in this case is (almost) guaranteed by the Perron-Frobenius theorem.
+
+    <div style="height: 0.5em;"></div>
+    There <em>are</em> some strange edge cases, but this is a topic for another post.
+</div>
+
+<!-- There *are* some edge cases, obviously. Let's call the Leslie matrix of some popuilation $L$. The existence of $\lambda$, a unique and real eigenvalue of the largest magnitude, is guaranteed by the Perron-Frobenius theorem. However, the theorem requires the entries of $L$ to be *positive*, not just non-negative. Hence the notion of ***primitivity***: even if $L$ is not a positive matrix, then some power $L^n$ will eventually be and save the day. We could apply the Perron-Frobenius theorem to $L^n$ instead of $L$ and extact $\lambda$ indirectly. Right?
+
+It turns out that in some exotic scenarios this assumption can be broken. Imagine Odd Country where only women of odd ages give any births. In this strange land children are born every second year, so the population never stablizes.  -->
+
+<!-- <div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <strong>Nerdy remark.</strong>
+  The convergence occurs because pushing a demographic simulation with constant parameters by a single year is a linear transformation called the Leslie matrix. In the long run, if we keep compounding this transformation with itself over and over, it becomes dominated by its largest eigenvalue. The corresponding eigenvector is exactly the equilibrium point the evolution eventually reaches.
+</div> -->]]></content><author><name>Paweł</name></author><summary type="html"><![CDATA[Włodzimierz Tetmajer, The Artist's Family (1905)]]></summary></entry><entry><title type="html">The Hardest Logic Puzzle Ever</title><link href="http://localhost:4000/2026/04/25/smullyan-puzzle.html" rel="alternate" type="text/html" title="The Hardest Logic Puzzle Ever" /><published>2026-04-25T00:00:00+02:00</published><updated>2026-04-25T00:00:00+02:00</updated><id>http://localhost:4000/2026/04/25/smullyan-puzzle</id><content type="html" xml:base="http://localhost:4000/2026/04/25/smullyan-puzzle.html"><![CDATA[<p><img src="/assets/img/goddesses/goddesses.png" alt="Front Image" style="max-width: 800px; width: 100%; display: block; margin: 1.5em auto;" /></p>
+
+<p>The puzzle once baptized as the hardest logic puzzle ever was described in an article by George Boolos, published in <em>The Harvard Review of Philosophy</em> in 1996, where Raymond Smullyan is mentioned in the very first sentence as its author. Who was the first to call it ‘the hardest ever’ isn’t entirely straightforward. The challenge:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Main Puzzle.</strong>
+    Three goddesses stand before you: the Goddess of Truth, who always speaks truthfully; the Goddess of Lies, who always speaks falsely; and the Goddess of Fate, who answers truthfully or falsely at random. You do not know which goddess is which. You may ask three Yes/No questions, each addressed to exactly one goddess, in order to determine their identities. The goddesses understand English but reply in their own language, in which the words Da and Ja mean Yes and No in some unknown order.
+  </em>
+</div>
+
+<h4 id="assumptions">Assumptions</h4>
+
+<p>In his article, Boolos himself mentioned a few clarifications:</p>
+
+<ul>
+  <li>
+    <p>Answers given by the Goddess of Fate may be treated as the result of a fair coin toss between Da and Ja. Since we are expected to provide a strategy that works with certainty, we must always consider both possibilities anyway.</p>
+  </li>
+  <li>
+    <p>You don’t have to question each goddess exactly once.</p>
+  </li>
+  <li>
+    <p>The choice of which goddess to question may depend on previous answers.</p>
+  </li>
+</ul>
+
+<p>One extra detail worth mentioning is that some solutions attempt to ‘hack’ the problem by posing paradoxical questions with no well-defined answer, for instance:</p>
+
+\[\text{Is this statement false?}\]
+
+<p>To rule out these cases, let’s simply assume that any such question makes a goddess wrathful and she responds with a randomly chosen answer. The same applies to questions that fall outside the scope of her vast knowledge.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="key-difficulties">Key difficulties</h4>
+
+<p>This problem is an excellent case study in how to decompose a larger task into a collection of smaller ones.</p>
+
+<p>We can quickly identify the core challenges posed:</p>
+
+<ul>
+  <li>
+    <p>We need to deal with the lying goddess.</p>
+  </li>
+  <li>
+    <p>We do not know whether Da means Yes or No.</p>
+  </li>
+  <li>
+    <p>One goddess provides random answers, shrouding everything in an extra layer of fog. Even if we somehow learned the meaning of Da/Ja and forced the Goddess of Lies to speak truthfully, it would still not be obvious how to proceed.</p>
+  </li>
+</ul>
+
+<p>For each of these points, we can construct a toy example that isolates the difficulty. Joining these bricks together will then lead to the solution naturally.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="two-guardians">Two guardians</h1>
+
+<p>The first issue we resolve is how to avoid getting tricked by the Goddess of Lies. It is best to start with a simpler puzzle, one that is possibly even more well known than the problem of three goddesses. I particularly like the classic two guardians lore, though many have encountered it in the form of the Knights and Knaves problem. It goes as follows:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 1.</strong>
+    Two guardians stand before you: one of them always speaks the truth; the other always lies. One of the guardians has a key that you need in order to proceed. You may ask a single Yes/No question, addressed to exactly one guardian, in order to determine which one possesses the key.
+  </em>
+</div>
+
+<figure style="max-width: 700px; margin: 1.5em auto; text-align: center;">
+  <img src="/assets/img/goddesses/samurai_jack_worms.png" alt="Two-headed Worm" style="width: 100%;" />
+  <figcaption style="font-size: 0.9em; color:  #000;">
+    The two guardians puzzle makes a cameo in popular media. For instance, in the 15th episode of Samurai Jack, a two-headed worm (falsely) promises to grant a wish if the samurai solves the puzzle correctly.
+  </figcaption>
+</figure>
+
+<p><strong>Solution of Puzzle 1:</strong> Ask any guardian the following question: <em>If you were the other guardian, which one of you would you point to as the one holding the key?</em> Then simply choose the guardian <strong>not</strong> indicated in the response.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="warm-up-questions">Warm-up questions</h4>
+
+<p>Let us ponder for a moment the dynamics behind the solution. It is natural to start by analyzing some obvious questions. A tempting first try:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Are you the one speaking the truth? </i><br />
+<b>T:</b> 
+<i> Yes. </i><br />
+<b>F:</b> 
+<i> Yes. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>This doesn’t look very helpful. Even if both guardians answered, we would gain no information. Let’s try a different approach:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Is it true that 2+2=4?</i><br />
+<b>T:</b> 
+<i> Yes. </i><br />
+<b>F:</b> 
+<i> No. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>Great. Now we know which one is the truth-teller, but we still have no idea who has the key. It is a small step forward, though. How about:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Do you have the key?</i><br />
+<b>T:</b> 
+<i> No. </i><br />
+<b>F:</b> 
+<i> No. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>In this case, we can conclude that the liar has the key, but we still cannot tell which guardian is which, so the key remains out of reach.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="putting-things-in-form">Putting things in form</h4>
+
+<p>Let’s organize our discussion a bit by introducing some notation. Assume that $x$ is a sentence and $v(x)$ is its logical value, so $v(x)=1$ if $x$ is true and $v(x)=0$ if $x$ is false. The general form of the question we ask is:</p>
+
+\[\text{Is it true that $x$?}\]
+
+<p>For instance, in one of the examples above we had $x = \text{“2+2=4”}$. In such cases, we expect one guardian to answer Yes and the other one to answer No. However, we also saw that the question “Do you have the key?” can result in two No’s (or two Yes’s). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as</p>
+
+\[x = \text{"Guardian A has the key."}\]
+
+<p>Now the logical value of the statement remains independent of the recipient. In practice, however, we will sometimes use simpler formulations such as “You have the key” and ignore this detail.</p>
+
+<p>Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.</p>
+
+<p>Let’s describe this reasoning using our rudimentary formalism. In this framework, it is more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:</p>
+
+<ul>
+  <li>
+    <p>If we ask $T$, we can simply ask whether $x$ is true.</p>
+  </li>
+  <li>
+    <p>If we ask $F$, we instead ask whether $\neg x$ is true.</p>
+  </li>
+</ul>
+
+<p>We can combine these two points into a single question. Define</p>
+
+\[\varphi(x) := (x \, \wedge \, \text{You are $T$}) \, \lor 
+    \, (\neg x \, \wedge \, \text{You are $F$}).\]
+
+<p>Now, we ask any guardian:</p>
+
+\[\text{Is it true that $\varphi(x)$?}\]
+
+<p>There are four possible cases: the guardian we ask may be truthful or not, and $x$ may be true or false. The resulting answers are summarized below. The ticks and crosses indicate whether $\varphi (x)$ itself evaluates to true $(\checkmark)$ or false $(\times)$.</p>
+
+\[\begin{array}{c|c|c}
+\text{Input} &amp; x &amp; \neg x \\
+\hline
+T &amp; \text{Yes } _\checkmark &amp; \text{No } _\times \\
+F &amp; \text{Yes } _\times &amp; \text{No } _\checkmark \\
+\end{array}\]
+
+<p>Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance “You have the key.”</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="how-much-can-a-yesno-tell-you">How much can a Yes/No tell you?</h1>
+
+<p>At this point, it may be helpful to recall how an answer carries information.</p>
+
+<p>Since each answer is Yes/No, we can think of it as a single bit of information, either $1$ or $0$. In this sense, a sequence of answers to, say, 3 questions can be represented as, for example, $101$ or $110$. In general, asking $k$ questions yields $2^k$ possible sequences of answers, each corresponding to a distinct state. On the other hand, if the number of states is $n$, then we need at least $\lceil \log_2 n \rceil$ questions to distinguish between them.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="example">Example</h4>
+
+<p>We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his ‘mistake’, answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let’s see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, we could assign:</p>
+
+\[\begin{aligned}
+        00 &amp;\mapsto \text{Barrel 1 is poisoned.} \\
+        01 &amp;\mapsto \text{Barrel 2 is poisoned.} \\
+        10 &amp;\mapsto \text{Barrel 3 is poisoned.} \\
+        11 &amp;\mapsto \text{Barrel 4 is poisoned.}
+    \end{aligned}\]
+
+<p>That leaves Barrel 5 with nowhere to go. All 2-bit sequences are already taken. So either we ask another question, or we accept that some outcomes must correspond to more than one possibility. For example:</p>
+
+\[11 \mapsto \text{One of the Barrels 4 or 5 is poisoned.}\]
+
+<p>If the servant answers Yes to both questions, you can still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:</p>
+
+\[\begin{aligned}
+        0 &amp;\mapsto \text{One of the Barrels 1 or 2 is poisoned.} \\
+        1 &amp;\mapsto \text{One of the Barrels 3, 4, or 5 is poisoned.}
+    \end{aligned}\]
+
+<p>Better than nothing.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="states-to-consider-in-the-smullyan-puzzle">States to consider in the Smullyan puzzle</h4>
+
+<p>In the main puzzle, we need to assign labels to three goddesses, which gives us $3!=6$ possible states. This means that $\lceil \log_2 6 \rceil = 3$ questions are the absolute minimum to distinguish between them, even if all the goddesses always spoke truthfully. Similarly, in the Two Guardians puzzle, we only needed to distinguish between 2 possible states, so a single question was enough.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="language-of-gods">Language of gods</h1>
+
+<p>Another complication is that the goddesses from the Smullyan puzzle do not simply answer Yes/No, but rather Da/Ja. Let us isolate this difficulty and look at a simpler problem.</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 2.</strong>
+    Two aliens stand before you: both of them always speak the truth. They understand English but reply in their own language, in which the words Da and Ja mean Yes and No in some unknown order. One of the aliens has a key that you need. You may ask a single Yes/No question, addressed to exactly one alien, in order to determine which one possesses the key.
+  </em>
+</div>
+
+<p>Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we cannot determine the logical values of the following two statements at the same time:</p>
+
+<ul>
+  <li>
+    <p>Da stands for Yes.</p>
+  </li>
+  <li>
+    <p>Alien A has the key.</p>
+  </li>
+</ul>
+
+<p>Each statement may be true or false, giving 4 possible cases in total. Since we receive only a single bit of information, we must identify which alien has the key without learning the meaning of Da or Ja. In fact, we can follow the same approach as in the previous subsection. Define</p>
+
+\[\psi(x) := (x \, \wedge \, \text{Da is Yes}) \, \lor 
+    \, (\neg x \, \wedge \, \text{Da is No}).\]
+
+<p>We now ask whether $\psi (x)$ is true. The possible answers are summarized below.</p>
+
+\[\begin{array}{c|c|c}
+\text{Input} &amp; x &amp; \neg x \\
+\hline
+\text{Da is Yes} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times \\
+\text{Da is No} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+\end{array}\]
+
+<p>We reached a configuration where Da simply indicates that the underlying question $x$ is true. The rest follows easily, since a single bit is enough to tell whether Alien A or Alien B has the key.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="even-aliens-can-lie">Even aliens can lie</h1>
+
+<p>Take the same alien puzzle from the previous section, but add the extra assumption that one of the aliens always lies. As before, we label them as $A$ and $B$, though we do not know which is which. This gives us $2^3=8$ possible cases: an alien may lie or not, Da may mean Yes or No, and the key may be held by either alien.</p>
+
+<p>To recover the answer to any question of our choice, we combine the constructions from the previous sections into a single, slightly monstrous sentence:</p>
+
+\[(\psi \, \circ \, \varphi ) (x) = 
+    (\varphi (x) \, \wedge \, \text{Da is Yes}) \, \lor 
+    \, (\neg \varphi (x) \, \wedge \, \text{Da is No}).\]
+
+<p>In other words, we first evaluate $\varphi (x)$, which neutralizes the liar, and then use $\psi$ to account for whether Da means Yes or No.</p>
+
+<p>If one wishes to fully expand this expression, we obtain:</p>
+
+\[\begin{aligned}
+        &amp;(x \, \wedge \, \text{You are $T$} \, \wedge \, \text{Da is Yes}) 
+        \, \lor \, 
+        (\neg x \, \wedge \, \text{You are $F$} \, \wedge \, \text{Da is Yes}) \\
+        \, \lor \,
+        &amp;(x \, \wedge \, \text{You are $F$} \, \wedge \, 
+        \text{Da is No})
+        \, \lor \,
+        (\neg x \, \wedge \, \text{You are $T$} \, \wedge \, \text{Da is No}) .
+    \end{aligned}\]
+
+<p>Here is how the possible answers play out:</p>
+
+\[\begin{array}{c|c|c}
+        \text{Input} &amp; x &amp; \neg x \\
+        \hline
+        T \, \wedge \, \text{Da is Yes} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times \\
+        T \, \wedge \, \text{Da is No} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+        F \, \wedge \, \text{Da is Yes} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+        F \, \wedge \, \text{Da is No} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times 
+    \end{array}\]
+
+<p>The key observation is the pattern: regardless of who we ask or what Da means, the answer Da is returned exactly when $x$ is true, and Ja otherwise.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="solution">Solution!</h1>
+
+<p>We have three goddesses, denoted by $T$, $F$, $R$ (for True, False, and Random): the Goddess of Truth, the Goddess of Lies, and the Goddess of Fate.</p>
+
+<p>Since we do not know which is which, we label them in arbitrary order as $G_1$, $G_2$, $G_3$. Our task is to identify the correct assignment among the 6 possibilities. For example, one such assignment is:</p>
+
+\[\begin{aligned}
+        G_1 &amp;\mapsto F \\
+        G_2 &amp;\mapsto T \\
+        G_3 &amp;\mapsto R
+    \end{aligned}\]
+
+<p>We now apply the construction developed in the previous sections. To determine whether a statement $x$ is true, we ask:</p>
+
+\[\text{Is it true that $(\psi \circ \varphi)(x)$?}\]
+
+<p>This way we neutralize the difficulties arising from the fact that one goddess always lies and that we do not speak the language of gods. We have effectively reduced the main puzzle to a simpler one:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 3.</strong>
+    Three goddesses stand before you, called T, F, and R. Both T and F now behave as truth-tellers; R answers truthfully or falsely at random.
+    You may ask three Yes/No questions, each addressed to exactly one goddess, in order to determine their identities.
+  </em>
+</div>
+
+<p>Let us first observe that if $R$ also always spoke truthfully, the puzzle would become easy. We could simply split the 6 possible assignments into two groups of three, say Group A and Group B, and ask:</p>
+
+\[\text{Is the correct assignment in Group A?}\]
+
+<p>After the first question, only 3 possibilities would remain. A second question would reduce this to at most 2, and a third would identify the correct one.</p>
+
+<p>Returning to the original setting, one of these bits is ‘foggy’, because $R$ answers at random. At first glance, this suggests that any answer from R is useless, but this is not quite true. We begin by asking $G_1$ the following question:</p>
+
+\[\text{Is it true that $G_2$ is $R$?}\]
+
+<p>The answer leads to the following chain of conclusions:</p>
+
+<ol>
+  <li>
+    If the answer is Yes, then either it is true and $G_2 = R$, or it is a lie,
+    which implies $G_1 = R$. In either case, we conclude that $G_3 \ne R$.
+  </li>
+  <li>
+    Similarly, if the answer is No, then $G_2 \ne R$.
+  </li>
+  <li>
+    In either case, we have identified at least one goddess who always speaks the truth.
+    From this point on, we can direct all remaining questions to her.
+  </li>
+  <li>
+    We are also left with only 4 possible permutations. For instance, if $G_2 \ne R$,
+    then both $(T, R, F)$ and $(F, R, T)$ are eliminated.
+  </li>
+</ol>
+
+<p>We are now done, because two questions are enough to determine which of the remaining 4 permutations is correct!</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="addendum-is-it-a-solution-or-the-solution">Addendum: Is it <em>a</em> solution or <em>the</em> solution?</h1>
+
+<p>The proverbial careful reader might have noticed that the question we asked $G_1$ in the previous section was somewhat arbitrary. It does the job, but is it really necessary?</p>
+
+<p>Let us take a step back. Any question we ask is, in effect, meant to identify a subset of permutations of $ T,F,R $ containing the true arrangement. In this sense, it can be viewed as equivalent to a question of the form:</p>
+
+\[\text{Does the correct permutation belong to the set } \mathcal{S}
+    \text{?}\]
+
+<p>where $\mathcal{S}$ may be any subset of the 6 possible permutations. Since each permutation either belongs to $\mathcal{S}$ or not, there are $2^6 = 64$ possible questions.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="what-makes-a-first-question-work">What makes a first question work?</h4>
+
+<p>This boils down to two simple requirements:</p>
+
+<ul>
+  <li>
+    <p>It must leave us with at most 4 candidate permutations. Otherwise, two further questions are not enough.</p>
+  </li>
+  <li>
+    <p>We must be able to identify at least one goddess who is not $R$.</p>
+  </li>
+</ul>
+
+<p>Let’s briefly explain why the second condition is necessary. Suppose our question concerns the subset</p>
+
+\[\mathcal{S} = \{ (R,F,T) , (F,R,T), (F,T,R)\}.\]
+
+<p>and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that if $G_1$ lies, then necessarily $G_1 = R$.</p>
+
+<figure style="max-width: 750px; margin: 1.5em auto; text-align: center;">
+  <img src="/assets/img/goddesses/goddesses_scenarios.png" alt="Scenarios" style="width: 100%; display: block;" />
+  <figcaption style="font-size: 0.8em; color: #000;">
+    The black dots represent the candidate permutations remaining after the first answer. Since we do not know whether the goddess is lying or not, we must consider both possibilities.
+  </figcaption>
+</figure>
+
+<p>Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. Any of the goddesses may still be $R$, so if we direct the second question, say, to $G_2$, the permutation $(F,R,T)$ always remains possible.</p>
+
+<p>If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. Since we cannot guarantee that $G_2 \not= R$, at least 3 permutations must still be considered: 1 arising from $G_2=R$ and 2 from $G_2\not=R$. This is too many to resolve with a single remaining question.</p>
+
+<p>The same argument applies if we direct the second question to $G_1$ or $G_3$ instead.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="counting-the-possible-solutions">Counting the possible solutions</h4>
+
+<p>We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn’t matter, since both remain possible anyway; at this stage, we cannot exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.</p>
+
+<p>In summary, any valid subset $\mathcal{S}$:</p>
+
+<ul>
+  <li>
+    <p>May contain $(R,F,T)$ or not.</p>
+  </li>
+  <li>
+    <p>May contain $(R,T,F)$ or not.</p>
+  </li>
+  <li>
+    <p>Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$, but not all four.</p>
+  </li>
+</ul>
+
+<p>This gives 8 valid first questions in total, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.</p>
+
+<p>On the other hand, all of these questions serve the same purpose: to quickly isolate a truthful goddess we can rely on. In that sense, whether the puzzle has a ‘unique’ solution is largely a matter of interpretation.</p>
+
+<!-- # Beyond the Original Problem
+
+(TODO: Mention the paper of this dude from ArXiv.)
+
+<div class="lemma-box" markdown="1">
+
+**Problem** $~$ Let $n, m$ be integers with $1 \leq m \leq n$. Consider a group of $n$ gods. Among them, $n - m$ always speak truthfully; denote them by $T_1, \dots, T_{n-m}$. The remaining $m$ gods, denoted $R_1, \dots, R_m$, answer each question either truthfully or falsely at random. Initially, their identities are unknown.
+
+You may ask a number of Yes/No questions, each addressed to exactly one god, in order to determine the identity of every god. Let $G(n, m)$ denote the minimal number of questions required to do so.
+
+</div> -->
+
+<!-- $$
+\begin{array}{c|c|c}
+\text{Input} & \varphi & \neg \varphi \\
+\hline
+T_{\text{Da}} & \text{Da } _\checkmark & \text{Ja } _\times \\
+T_{\text{Ja}} & \text{Da } _\times & \text{Ja } _\checkmark \\
+F_{\text{Da}} & \text{Da } _\times & \text{Ja } _\checkmark \\
+F_{\text{Ja}} & \text{Da } _\checkmark & \text{Ja } _\times \\
+\end{array}
+$$ -->]]></content><author><name>Paweł</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Geometry of Variance Estimators</title><link href="http://localhost:4000/2026/01/20/variance-estimator.html" rel="alternate" type="text/html" title="Geometry of Variance Estimators" /><published>2026-01-20T00:00:00+01:00</published><updated>2026-01-20T00:00:00+01:00</updated><id>http://localhost:4000/2026/01/20/variance-estimator</id><content type="html" xml:base="http://localhost:4000/2026/01/20/variance-estimator.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+  <img src="/assets/img/variance/kandinsky.png" alt="ASFR in Poland of 2014" style="width: 100%; display: block;" />
+  <figcaption style="font-size: 0.8em; color: #000;">
+    Wassily Kandinsky, <em>White Cross</em> (1922), detail
+  </figcaption>
+</figure>
+
+<p>The unbiased variance estimator is given by the well-known formula:</p>
+
+\[\widehat{\sigma}^2 := \frac{1}{n-1} \sum_{i=1}^n \left( X_i - \overline{X} \right)^2 ,\]
+
+<p>where $X_1,\dots,X_n$ are independent draws from the same distribution and $\overline{X}$ denotes the sample mean.</p>
+
+<p>From time to time, someone in the room eventually asks:</p>
+
+<div class="aside">
+  <p><em>Why do we have $n-1$ in the denominator? The expression looks almost like an average of $n$ squared deviations, so why isn’t the denominator simply $n$?</em></p>
+</div>
+
+<p>There are two answers one usually hears:</p>
+
+<ol>
+  <li>Write down the bias $\mathbf{E}[\widehat{\sigma}^2] - \sigma^2$, expand the square, expand $\overline{X}$, expand all the sums, calculate. See? It’s $0$.</li>
+  <li>Because there are only $n-1$ degrees of freedom among the $X_i$, since translating all measurements by the same amount leaves the variance unchanged.</li>
+</ol>
+
+<p>The first answer is formally correct, but it explains little. The second one may feel hand-wavy. Why should degrees of freedom matter at all? Where, exactly, did the missing dimension go?</p>
+
+<p>Since the difference between $\frac{1}{n}$ and $\frac{1}{n-1}$ is most visible for small values of $n$, let us begin by examining what happens in that regime.</p>
+
+<h3 id="some-intuition-case-n--1">Some Intuition: Case $n = 1$</h3>
+
+<p>Suppose we have only a single random measurement, and we observe $X_1 = 10$.<br />
+There are many pairs $(\mu,\sigma)$ consistent with such an observation, for example:</p>
+
+<ol>
+  <li>$\mu \approx 10$ and $\sigma$ very small,</li>
+  <li>$\mu \approx 10$ and $\sigma \approx 50$.</li>
+</ol>
+
+<p>There is no way to decide which scenario is closer to the truth. A single observation offers no reliable information about the variance.</p>
+
+<p>Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. Now we can at least guess the order of magnitude of $\sigma$. For example, it is highly unlikely that $\sigma \ll 1$. Weak information, but no longer nothing.</p>
+
+<p>With the exact value of the mean pinned down, we are granted a point of reference. It turns out that for fixed $\mu$ we can construct a slightly different unbiased estimator:</p>
+
+\[\widehat{\sigma}^2_{\mu\text{ known}} := \frac{1}{n} \sum_{i=1}^n \left( X_i - \mu \right)^2\]
+
+<p>Replacing $n$ with $n - 1$ in the denominator might be viewed as a premium paid for not knowing the exact value of $\mu$. In the following sections, we try to make this intuition more precise.</p>
+
+<h3 id="orthogonal-projections">Orthogonal Projections</h3>
+
+<p>When thinking about $\widehat{\sigma}^2$ geometrically, we may view it as the squared Euclidean norm of an $n$-dimensional vector, normalized by $n-1$. If we define the sample vector</p>
+
+\[\boldsymbol{X} = [X_1, \dots, X_n]^\top\]
+
+<p>and the center-of-mass vector</p>
+
+\[\boldsymbol{C} = \overline{X}\,\mathbf{1}
+= [\overline{X}, \dots, \overline{X}]^\top,\]
+
+<p>where $\mathbf{1}$ stands for the all-ones vector, then</p>
+
+\[\widehat{\sigma}^2
+= \frac{1}{n-1}\,\lVert \boldsymbol{X} - \boldsymbol{C} \rVert_{\ell^2}^2.\]
+
+<p>Here $\lVert \cdot \rVert_{\ell^2}$ denotes the Euclidean norm, the standard way mathematicians refer to ‘distance from zero’.</p>
+
+<p>Neat. We are interested in the expected distance from $\boldsymbol{X} - \boldsymbol{C}$ to $\mathbf{0}$. Let’s notice a simple but important property of this vector: if we define $X_i’ = X_i - \overline{X}$ for $i = 1, \dots, n$, then</p>
+
+\[\langle \boldsymbol{X} - \boldsymbol{C}, \mathbf{1} \rangle
+= X_1' + \dots + X_n'=\]
+
+\[\left( X_1 - \frac{X_1 + \dots + X_n}{n} \right)
++ \dots
++ \left( X_n - \frac{X_1 + \dots + X_n}{n} \right)
+= 0.\]
+
+<p>This shows that the random vectors $\boldsymbol{X}-\boldsymbol{C}$ are perpendicular to the all-ones vector $\mathbf{1}$. Since $\boldsymbol{C}$ itself is a scalar multiple of $\mathbf{1}$, it follows that $\boldsymbol{X}-\boldsymbol{C}$ is the orthogonal projection of $\boldsymbol{X}$ onto the hyperplane</p>
+
+\[x_1 + \dots + x_n = 0.\]
+
+<p>Let’s take a look at a simple case in dimension two.</p>
+
+<p><img src="/assets/img/variance/projection_single.png" alt="Variance estimator animation" style="max-width: 600px; width: 100%; display: block; margin: 1.5em auto;" /></p>
+
+<p>Even though the scenario depicted above may appear simplistic, it still allows for a few useful observations.</p>
+
+<ul>
+  <li>If $\mu = 0$, the squared distance of the blue point from the origin represents $n\,\widehat{\sigma}^2_{\mu\text{ known}}$. Changing $\mu$ simply translates the point along the $[1,1]^\top$ direction, while its projection remains fixed.</li>
+  <li>Similarly, the squared distance of the red point from the origin represents $(n-1)\,\widehat{\sigma}^2$, where we pretend that the true value of $\mu$ remains unknown.</li>
+</ul>
+
+<p>Basic trigonometry shows that we have</p>
+
+\[\lVert \boldsymbol{X} \rVert_{\ell^2} \cos(\alpha)
+=
+\lVert \boldsymbol{X} - \boldsymbol{C} \rVert_{\ell^2},\]
+
+<p>which in the $\mu = 0$ case implies</p>
+
+\[n\,\widehat{\sigma}^2_{\mu\text{ known}} \cos(\alpha)
+
+= (n-1)\,\widehat{\sigma}^2 .\]
+
+<p>Now observe that replacing $n-1$ with $n$ in the definition of $\widehat{\sigma}^2$ would lead to a highly dubious identity</p>
+
+\[\widehat{\sigma}^2_{\mu\text{ known}} \cos(\alpha)
+\stackrel{?!}{=}
+\widehat{\sigma}^2.\]
+
+<p>Since $\lvert \cos(\alpha) \rvert \leq 1$, this would systematically push the variance estimate downward. This is precisely the bias we want to avoid.</p>
+
+<p>While this is not yet a proof, it is already clear that using $\frac{1}{n}$ is a wrong choice of the normalization factor when constructing $\widehat{\sigma}^2$.</p>
+
+<h2 id="more-intuition-case-n--2">More Intuition: Case $n = 2$</h2>
+
+<p>In this experiment we sample $\mu$ from the interval $[-3, 3]$.
+For this mean we draw $(X_1, X_2)$ pairs $500$ times, where
+$X_1$ and $X_2$ come from the normal distribution $\mathcal{N}(\mu, 1)$.
+For each pair, we estimate the variance by computing both
+$\widehat{\sigma}^2$ and $\widehat{\sigma}^2_{\mu \text{ known}}$.</p>
+
+<p>We proceed in the same way as in the previous subsection:</p>
+
+<ul>
+  <li>To obtain $\widehat{\sigma}^2_{\mu \text{ known}}$, we compute the distance
+from $(X_1, X_2)$ to $(\mu, \mu)$.</li>
+  <li>To obtain $\widehat{\sigma}^2$, we compute the distance from the origin to the
+projection of $(X_1, X_2)$ onto the line $X_1 + X_2 = 0$.</li>
+</ul>
+
+<p><img src="/assets/mu_shift_2.gif" alt="Variance estimator animation" style="max-width: 600px; width: 100%; display: block; margin: 1.5em auto;" /></p>
+
+<p>As the animation shows, both estimators remain constant as $\mu$ varies.
+This is expected: $\widehat{\sigma}^2_{\mu \text{ known}}$ is proportional to
+the distance from the center of the blue mass, so translating it changes nothing,
+while $\widehat{\sigma}^2$ is based on projections, and translating the blue mass
+along the $[1,1]^\top$ direction does not affect its projection.</p>
+
+<p>We observe that the deviation of the red dots is systematically smaller, since one
+direction is removed entirely. This is precisely the geometric origin of the
+$n - 1$ degrees of freedom.</p>
+
+<p>What is the main source of this discrepancy? Consider a blue point
+$\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
+blue mass, it contributes a lot to the average deviation. However, after
+projection the situation looks different. The same point is now mapped to
+$\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
+$\mathbf{0}$.</p>
+
+<p>This reflects the fact that observing $X_1 = 4.01$ and $X_2 = 4.03$ with $\mu$
+unknown naturally suggests values concentrated around $4$ and a small variance.
+While $n = 2$ hardly constitutes a meaningful sample, this interpretation is at
+least reasonable if one is forced to make a judgement.</p>
+
+<p>To observe a similar effect for larger samples (namely, all measurements clustering
+together while remaining far from the true mean) we would need to be rather unlucky.
+This explains why replacing $\frac{1}{n}$ with $\frac{1}{n-1}$ becomes almost
+irrelevant for large $n$, but critical when the sample is small.</p>
+
+<h3 id="geometric-argument-made-formal">Geometric Argument, Made Formal</h3>
+
+<p>Let’s play around a bit with the expression</p>
+
+\[\widehat{\theta} := \sum_{i=1}^n 
+\left( X_i - \overline{X} \right)^2 ,\]
+
+<p>As we have already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let’s re-introduce the following notation:</p>
+
+\[\text{the sample vector}\quad
+\boldsymbol{X} =
+\begin{bmatrix}
+X_{1} \\
+\vdots \\
+X_{n}
+\end{bmatrix},
+\qquad
+\text{the all-ones vector}\quad
+\boldsymbol{1} =
+\begin{bmatrix}
+1 \\
+\vdots \\
+1
+\end{bmatrix}.\]
+
+<p>We can then form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:</p>
+
+\[\boldsymbol{X} - \boldsymbol{1} \overline{X} 
+=
+\begin{bmatrix}
+X_{1} - \overline{X}  \\
+\vdots \\
+X_{n} - \overline{X} 
+\end{bmatrix}.\]
+
+<p>We can now see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us</p>
+
+\[\widehat{\theta}
+=
+\| \boldsymbol{X} - \boldsymbol{1} \overline{X} \|_{\ell^2}^2.\]
+
+<p>This observation also allows us to rewrite $\widehat{\theta}$ in a more compact way, more suitable for matrix calculations:</p>
+
+\[\widehat{\theta}
+=
+\langle \boldsymbol{X} - \boldsymbol{1} \overline{X},
+\boldsymbol{X} - \boldsymbol{1} \overline{X} \rangle
+=
+\left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right)^\top
+\left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right).\]
+
+<p>We notice that the expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ is meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies</p>
+
+\[\boldsymbol{P} \boldsymbol{X}
+=
+\boldsymbol{X} - \boldsymbol{1} \overline{X},\]
+
+<p>so we could study its properties and hopefully get some insights. To get there, we need to describe $\overline{X}$ in terms of $\boldsymbol{X}$:</p>
+
+\[\overline{X}
+=
+\frac{1}{n} \left( X_1 + \dots + X_n \right)
+=
+\frac{1}{n} \boldsymbol{1}^\top \boldsymbol{X}.\]
+
+<p>Of course, the dot product above could be also described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,</p>
+
+\[\boldsymbol{X} - \overline{X} \boldsymbol{1}
+=
+\boldsymbol{X}
+-
+\frac{1}{n} \boldsymbol{1} \boldsymbol{1}^\top \boldsymbol{X}
+=
+\underbrace{
+\left( \mathbf{id} - \frac{1}{n} \boldsymbol{1}\boldsymbol{1}^\top \right)
+}_{\boldsymbol{P}}
+\boldsymbol{X}.\]
+
+<p>Just for the record, the matrix $\boldsymbol{P}$ is:</p>
+
+\[\boldsymbol{P}
+=
+\begin{bmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{bmatrix}
+-
+\frac{1}{n}
+\begin{bmatrix}
+1 &amp; 1 &amp; \cdots &amp; 1 \\
+1 &amp; 1 &amp; \cdots &amp; 1 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+1 &amp; 1 &amp; \cdots &amp; 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1-\frac{1}{n} &amp; -\frac{1}{n} &amp; \cdots &amp; -\frac{1}{n} \\
+-\frac{1}{n} &amp; 1-\frac{1}{n} &amp; \cdots &amp; -\frac{1}{n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+-\frac{1}{n} &amp; -\frac{1}{n} &amp; \cdots &amp; 1-\frac{1}{n}
+\end{bmatrix}.\]
+
+<p>Fine, we succeeded in creating an operator $\boldsymbol{P}$ of the desired property. We get</p>
+
+\[\widehat{\theta}
+=
+(\boldsymbol{P} \boldsymbol{X})^\top (\boldsymbol{P} \boldsymbol{X})
+=
+\boldsymbol{X}^\top \boldsymbol{P}^\top \boldsymbol{P} \boldsymbol{X}.\]
+
+<p>The matrix/operator $\boldsymbol{P}$ has two critical properties:</p>
+
+<ol>
+  <li>It is symmetric, so $\boldsymbol{P}^\top = \boldsymbol{P}$.</li>
+  <li>It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing, because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.</li>
+</ol>
+
+<p>In other words, it’s an orthogonal projection (as already observed in the previous sections). Thus, we get</p>
+
+\[\widehat{\theta}
+=
+\boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X}.\]
+
+<p>To answer what factor fits an unbiased estimator of variance, we need to calculate the expected value of the expressions above. To this end, we need a supplementary result.</p>
+
+<div class="lemma-box">
+
+  <p><strong>Little Lemma.</strong> $~$ Let $\boldsymbol{X}$ be a random vector of independent entries of length $n$ such that
+$X_i \sim X$ for all the indices $i$, where $X$ is a random variable with well defined
+expected value $\mu$ and variance $\sigma^2$. Let $\boldsymbol{A}$ be an $n \times n$
+matrix. Then,</p>
+
+\[\mathbf{E}\!\left[ \boldsymbol{X}^\top \boldsymbol{A} \boldsymbol{X} \right]
+=
+\mu^2 \Sigma_{\boldsymbol{A}} + \sigma^2 \operatorname{tr}(\boldsymbol{A}),\]
+
+  <p>where $\Sigma_{\boldsymbol{A}}$ stands for the sum of all the entries of $\boldsymbol{A}$
+and $\operatorname{tr}(\boldsymbol{A})$ for the trace of $\boldsymbol{A}$.</p>
+
+</div>
+
+<p><em>Proof.</em> $~$ Unfortunately, we need to simply expand. It doesn’t seem like there is anything more
+clever we could pull off:</p>
+
+\[\mathbf{E}\!\left[ \boldsymbol{X}^\top \boldsymbol{A} \boldsymbol{X} \right]
+=
+\sum_{i=1}^n \sum_{j=1}^n A_{ij} \mathbf{E} \left[ X_i X_j \right].\]
+
+<p>Provided that $i \neq j$, we have</p>
+
+\[\mathbf{E} \left[ X_i X_j \right]
+=
+\mathbf{E} \left[ X_i \right] \mathbf{E} \left[ X_j \right]
+=
+\mathbf{E} \left[ X \right]^2
+=
+\mu^2.\]
+
+<p>On the other hand, if $i=j$, then
+$\mathbf{E} \left[ X_i X_j \right] = \mathbf{E} \left[ X^2 \right]$ and we notice</p>
+
+\[\sigma^2
+=
+\mathbf{E} \left[ (X - \mu)^2 \right]
+=
+\mathbf{E} \left[ X^2 \right] - \mu^2,\]
+
+<p>which gives $\mathbf{E} \left[ X^2 \right] = \sigma^2 + \mu^2$.</p>
+
+<p>This gives us</p>
+
+\[\mathbf{E}\!\left[ \boldsymbol{X}^\top \boldsymbol{A} \boldsymbol{X} \right]
+=
+\mu^2 \sum_{i=1}^n \sum_{j=1}^n A_{ij}
++
+\sigma^2 \sum_{i=1}^n A_{ii}
+=
+\mu^2 \Sigma_{\boldsymbol{A}} + \sigma^2 \operatorname{tr}(\boldsymbol{A}).\]
+
+<p><span class="qed">□</span></p>
+
+<p>In our discussion we are interested in calculating
+$\mathbf{E} \left[ \boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X} \right]$.
+This turns out to be quite simple, because the sum of all the entries vanishes. We thus have</p>
+
+\[\mathbf{E} [ \widehat{\theta} ]
+=
+\sigma^2 \operatorname{tr}(\boldsymbol{P})
+=
+(n-1)\sigma^2.\]
+
+<p>That’s all. To make the estimator unbiased, we just divide $\widehat{\theta}$ by $n-1$.</p>
+
+<h3 id="appendix-what-if-mu-is-known">Appendix: What if $\mu$ is known?</h3>
+
+<p>Let us follow the same geometric argument. First, we note that</p>
+
+\[\mathbf{E}[\widehat{\sigma}^2_{\text{$\mu$ known}}]
+=
+\mathbf{E}[\boldsymbol{X}^2] - \mu^2.\]
+
+<p>We also observe that for the sample vector $\boldsymbol{X}$ it holds that</p>
+
+\[\mathbf{E}[\boldsymbol{X}^2]
+=
+\frac{1}{n} \| \boldsymbol{X} \|_{\ell^2}
+=
+\frac{1}{n} \boldsymbol{X}^\top \boldsymbol{X}.\]
+
+<p>In other words, we now deal with $\boldsymbol{X}^\top \boldsymbol{X}$ instead of
+$\boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X}$. The projection matrix
+$\boldsymbol{P}$ got replaced by the identity matrix $\mathbf{id}$.
+Applying Little Lemma, we obtain</p>
+
+\[\frac{1}{n}
+\mathbf{E}\!\left[
+\boldsymbol{X}^\top \boldsymbol{X}
+\right]
+=
+\mu^2 + \sigma^2,\]
+
+<p>since $\text{tr}(\mathbf{id}) = n$. This yields</p>
+
+\[\mathbf{E}[\widehat{\sigma}^2_{\text{$\mu$ known}}]
+=
+\mu^2 + \sigma^2 - \mu^2
+=
+\sigma^2.\]
+
+<p>The means cancel out, as they should, since the variance has nothing to do with
+$\mu$. The estimator $\widehat{\sigma}^2_{\mu\ \text{known}}$ is unbiased, and the
+factor $n-1$ simply does not show up here.</p>]]></content><author><name>Paweł</name></author><summary type="html"><![CDATA[Wassily Kandinsky, White Cross (1922), detail]]></summary></entry></feed>

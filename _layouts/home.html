@@ -9,10 +9,52 @@ layout: default
     gap: 60px;
 }
 
-.left-image img {
+.home-layout figure {
+    max-width: 260px;
+    height: auto;
+    text-align: right;
+    margin: 0;
+    flex: 0 0 260px;
+}
+
+.home-layout figure img {
     width: 220px;
     max-width: 100%;
     height: auto;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .home-layout {
+        display: block;
+    }
+
+    .home-layout figure {
+        max-width: 220px;
+        margin: 0 auto 2rem auto;
+        text-align: center;
+    }
+
+    .home-layout figure img {
+        width: 180px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content h2 {
+        font-size: 2rem !important;
+    }
+
+    .post-link {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 </style>
 
@@ -28,7 +70,7 @@ layout: default
   <figure style="max-width: 260px; height: auto; text-align: right;">
     <img src="/assets/img/profile/pingwiniak.png" alt="">
     <figcaption style="font-size: 0.8em; color: #000;">
-      <div style="height: 0.5em;"></div></be>Łukasz Skrzeszewski, <em>The Penguin</em> (2024)
+      <div style="height: 0.5em;"></div>Łukasz Skrzeszewski, <em>The Penguin</em> (2024)
     </figcaption>
   </figure>
 

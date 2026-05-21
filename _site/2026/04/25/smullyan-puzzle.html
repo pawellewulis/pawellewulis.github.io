@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Hardest Logic Puzzle Ever | </title>
+
+  <link rel="stylesheet" href="/assets/main.css?v=2">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate"
+        type="application/atom+xml"
+        title=""
+        href="/feed.xml">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script defer data-domain="pavellev.blog" src="https://plausible.io/js/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The Hardest Logic Puzzle Ever</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-04-25T00:00:00+02:00" itemprop="datePublished">
+        Apr 25, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/img/goddesses/goddesses.png" alt="Front Image" style="max-width: 800px; width: 100%; display: block; margin: 1.5em auto;" /></p>
+
+<p>The puzzle once baptized as the hardest logic puzzle ever was described in an article by George Boolos, published in <em>The Harvard Review of Philosophy</em> in 1996, where Raymond Smullyan is mentioned in the very first sentence as its author. Who was the first to call it ‘the hardest ever’ isn’t entirely straightforward. The challenge:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Main Puzzle.</strong>
+    Three goddesses stand before you: the Goddess of Truth, who always speaks truthfully; the Goddess of Lies, who always speaks falsely; and the Goddess of Fate, who answers truthfully or falsely at random. You do not know which goddess is which. You may ask three Yes/No questions, each addressed to exactly one goddess, in order to determine their identities. The goddesses understand English but reply in their own language, in which the words Da and Ja mean Yes and No in some unknown order.
+  </em>
+</div>
+
+<h4 id="assumptions">Assumptions</h4>
+
+<p>In his article, Boolos himself mentioned a few clarifications:</p>
+
+<ul>
+  <li>
+    <p>Answers given by the Goddess of Fate may be treated as the result of a fair coin toss between Da and Ja. Since we are expected to provide a strategy that works with certainty, we must always consider both possibilities anyway.</p>
+  </li>
+  <li>
+    <p>You don’t have to question each goddess exactly once.</p>
+  </li>
+  <li>
+    <p>The choice of which goddess to question may depend on previous answers.</p>
+  </li>
+</ul>
+
+<p>One extra detail worth mentioning is that some solutions attempt to ‘hack’ the problem by posing paradoxical questions with no well-defined answer, for instance:</p>
+
+\[\text{Is this statement false?}\]
+
+<p>To rule out these cases, let’s simply assume that any such question makes a goddess wrathful and she responds with a randomly chosen answer. The same applies to questions that fall outside the scope of her vast knowledge.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="key-difficulties">Key difficulties</h4>
+
+<p>This problem is an excellent case study in how to decompose a larger task into a collection of smaller ones.</p>
+
+<p>We can quickly identify the core challenges posed:</p>
+
+<ul>
+  <li>
+    <p>We need to deal with the lying goddess.</p>
+  </li>
+  <li>
+    <p>We do not know whether Da means Yes or No.</p>
+  </li>
+  <li>
+    <p>One goddess provides random answers, shrouding everything in an extra layer of fog. Even if we somehow learned the meaning of Da/Ja and forced the Goddess of Lies to speak truthfully, it would still not be obvious how to proceed.</p>
+  </li>
+</ul>
+
+<p>For each of these points, we can construct a toy example that isolates the difficulty. Joining these bricks together will then lead to the solution naturally.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="two-guardians">Two guardians</h1>
+
+<p>The first issue we resolve is how to avoid getting tricked by the Goddess of Lies. It is best to start with a simpler puzzle, one that is possibly even more well known than the problem of three goddesses. I particularly like the classic two guardians lore, though many have encountered it in the form of the Knights and Knaves problem. It goes as follows:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 1.</strong>
+    Two guardians stand before you: one of them always speaks the truth; the other always lies. One of the guardians has a key that you need in order to proceed. You may ask a single Yes/No question, addressed to exactly one guardian, in order to determine which one possesses the key.
+  </em>
+</div>
+
+<figure style="max-width: 700px; margin: 1.5em auto; text-align: center;">
+  <img src="/assets/img/goddesses/samurai_jack_worms.png" alt="Two-headed Worm" style="width: 100%;" />
+  <figcaption style="font-size: 0.9em; color:  #000;">
+    The two guardians puzzle makes a cameo in popular media. For instance, in the 15th episode of Samurai Jack, a two-headed worm (falsely) promises to grant a wish if the samurai solves the puzzle correctly.
+  </figcaption>
+</figure>
+
+<p><strong>Solution of Puzzle 1:</strong> Ask any guardian the following question: <em>If you were the other guardian, which one of you would you point to as the one holding the key?</em> Then simply choose the guardian <strong>not</strong> indicated in the response.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="warm-up-questions">Warm-up questions</h4>
+
+<p>Let us ponder for a moment the dynamics behind the solution. It is natural to start by analyzing some obvious questions. A tempting first try:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Are you the one speaking the truth? </i><br />
+<b>T:</b> 
+<i> Yes. </i><br />
+<b>F:</b> 
+<i> Yes. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>This doesn’t look very helpful. Even if both guardians answered, we would gain no information. Let’s try a different approach:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Is it true that 2+2=4?</i><br />
+<b>T:</b> 
+<i> Yes. </i><br />
+<b>F:</b> 
+<i> No. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>Great. Now we know which one is the truth-teller, but we still have no idea who has the key. It is a small step forward, though. How about:</p>
+
+<div align="left">
+<b>Question:</b>
+<i>Do you have the key?</i><br />
+<b>T:</b> 
+<i> No. </i><br />
+<b>F:</b> 
+<i> No. </i>
+</div>
+<div style="height: 0.7em;"></div>
+<p>In this case, we can conclude that the liar has the key, but we still cannot tell which guardian is which, so the key remains out of reach.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="putting-things-in-form">Putting things in form</h4>
+
+<p>Let’s organize our discussion a bit by introducing some notation. Assume that $x$ is a sentence and $v(x)$ is its logical value, so $v(x)=1$ if $x$ is true and $v(x)=0$ if $x$ is false. The general form of the question we ask is:</p>
+
+\[\text{Is it true that $x$?}\]
+
+<p>For instance, in one of the examples above we had $x = \text{“2+2=4”}$. In such cases, we expect one guardian to answer Yes and the other one to answer No. However, we also saw that the question “Do you have the key?” can result in two No’s (or two Yes’s). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as</p>
+
+\[x = \text{"Guardian A has the key."}\]
+
+<p>Now the logical value of the statement remains independent of the recipient. In practice, however, we will sometimes use simpler formulations such as “You have the key” and ignore this detail.</p>
+
+<p>Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.</p>
+
+<p>Let’s describe this reasoning using our rudimentary formalism. In this framework, it is more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:</p>
+
+<ul>
+  <li>
+    <p>If we ask $T$, we can simply ask whether $x$ is true.</p>
+  </li>
+  <li>
+    <p>If we ask $F$, we instead ask whether $\neg x$ is true.</p>
+  </li>
+</ul>
+
+<p>We can combine these two points into a single question. Define</p>
+
+\[\varphi(x) := (x \, \wedge \, \text{You are $T$}) \, \lor 
+    \, (\neg x \, \wedge \, \text{You are $F$}).\]
+
+<p>Now, we ask any guardian:</p>
+
+\[\text{Is it true that $\varphi(x)$?}\]
+
+<p>There are four possible cases: the guardian we ask may be truthful or not, and $x$ may be true or false. The resulting answers are summarized below. The ticks and crosses indicate whether $\varphi (x)$ itself evaluates to true $(\checkmark)$ or false $(\times)$.</p>
+
+\[\begin{array}{c|c|c}
+\text{Input} &amp; x &amp; \neg x \\
+\hline
+T &amp; \text{Yes } _\checkmark &amp; \text{No } _\times \\
+F &amp; \text{Yes } _\times &amp; \text{No } _\checkmark \\
+\end{array}\]
+
+<p>Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance “You have the key.”</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="how-much-can-a-yesno-tell-you">How much can a Yes/No tell you?</h1>
+
+<p>At this point, it may be helpful to recall how an answer carries information.</p>
+
+<p>Since each answer is Yes/No, we can think of it as a single bit of information, either $1$ or $0$. In this sense, a sequence of answers to, say, 3 questions can be represented as, for example, $101$ or $110$. In general, asking $k$ questions yields $2^k$ possible sequences of answers, each corresponding to a distinct state. On the other hand, if the number of states is $n$, then we need at least $\lceil \log_2 n \rceil$ questions to distinguish between them.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="example">Example</h4>
+
+<p>We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his ‘mistake’, answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let’s see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, we could assign:</p>
+
+\[\begin{aligned}
+        00 &amp;\mapsto \text{Barrel 1 is poisoned.} \\
+        01 &amp;\mapsto \text{Barrel 2 is poisoned.} \\
+        10 &amp;\mapsto \text{Barrel 3 is poisoned.} \\
+        11 &amp;\mapsto \text{Barrel 4 is poisoned.}
+    \end{aligned}\]
+
+<p>That leaves Barrel 5 with nowhere to go. All 2-bit sequences are already taken. So either we ask another question, or we accept that some outcomes must correspond to more than one possibility. For example:</p>
+
+\[11 \mapsto \text{One of the Barrels 4 or 5 is poisoned.}\]
+
+<p>If the servant answers Yes to both questions, you can still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:</p>
+
+\[\begin{aligned}
+        0 &amp;\mapsto \text{One of the Barrels 1 or 2 is poisoned.} \\
+        1 &amp;\mapsto \text{One of the Barrels 3, 4, or 5 is poisoned.}
+    \end{aligned}\]
+
+<p>Better than nothing.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="states-to-consider-in-the-smullyan-puzzle">States to consider in the Smullyan puzzle</h4>
+
+<p>In the main puzzle, we need to assign labels to three goddesses, which gives us $3!=6$ possible states. This means that $\lceil \log_2 6 \rceil = 3$ questions are the absolute minimum to distinguish between them, even if all the goddesses always spoke truthfully. Similarly, in the Two Guardians puzzle, we only needed to distinguish between 2 possible states, so a single question was enough.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="language-of-gods">Language of gods</h1>
+
+<p>Another complication is that the goddesses from the Smullyan puzzle do not simply answer Yes/No, but rather Da/Ja. Let us isolate this difficulty and look at a simpler problem.</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 2.</strong>
+    Two aliens stand before you: both of them always speak the truth. They understand English but reply in their own language, in which the words Da and Ja mean Yes and No in some unknown order. One of the aliens has a key that you need. You may ask a single Yes/No question, addressed to exactly one alien, in order to determine which one possesses the key.
+  </em>
+</div>
+
+<p>Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we cannot determine the logical values of the following two statements at the same time:</p>
+
+<ul>
+  <li>
+    <p>Da stands for Yes.</p>
+  </li>
+  <li>
+    <p>Alien A has the key.</p>
+  </li>
+</ul>
+
+<p>Each statement may be true or false, giving 4 possible cases in total. Since we receive only a single bit of information, we must identify which alien has the key without learning the meaning of Da or Ja. In fact, we can follow the same approach as in the previous subsection. Define</p>
+
+\[\psi(x) := (x \, \wedge \, \text{Da is Yes}) \, \lor 
+    \, (\neg x \, \wedge \, \text{Da is No}).\]
+
+<p>We now ask whether $\psi (x)$ is true. The possible answers are summarized below.</p>
+
+\[\begin{array}{c|c|c}
+\text{Input} &amp; x &amp; \neg x \\
+\hline
+\text{Da is Yes} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times \\
+\text{Da is No} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+\end{array}\]
+
+<p>We reached a configuration where Da simply indicates that the underlying question $x$ is true. The rest follows easily, since a single bit is enough to tell whether Alien A or Alien B has the key.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="even-aliens-can-lie">Even aliens can lie</h1>
+
+<p>Take the same alien puzzle from the previous section, but add the extra assumption that one of the aliens always lies. As before, we label them as $A$ and $B$, though we do not know which is which. This gives us $2^3=8$ possible cases: an alien may lie or not, Da may mean Yes or No, and the key may be held by either alien.</p>
+
+<p>To recover the answer to any question of our choice, we combine the constructions from the previous sections into a single, slightly monstrous sentence:</p>
+
+\[(\psi \, \circ \, \varphi ) (x) = 
+    (\varphi (x) \, \wedge \, \text{Da is Yes}) \, \lor 
+    \, (\neg \varphi (x) \, \wedge \, \text{Da is No}).\]
+
+<p>In other words, we first evaluate $\varphi (x)$, which neutralizes the liar, and then use $\psi$ to account for whether Da means Yes or No.</p>
+
+<p>If one wishes to fully expand this expression, we obtain:</p>
+
+\[\begin{aligned}
+        &amp;(x \, \wedge \, \text{You are $T$} \, \wedge \, \text{Da is Yes}) 
+        \, \lor \, 
+        (\neg x \, \wedge \, \text{You are $F$} \, \wedge \, \text{Da is Yes}) \\
+        \, \lor \,
+        &amp;(x \, \wedge \, \text{You are $F$} \, \wedge \, 
+        \text{Da is No})
+        \, \lor \,
+        (\neg x \, \wedge \, \text{You are $T$} \, \wedge \, \text{Da is No}) .
+    \end{aligned}\]
+
+<p>Here is how the possible answers play out:</p>
+
+\[\begin{array}{c|c|c}
+        \text{Input} &amp; x &amp; \neg x \\
+        \hline
+        T \, \wedge \, \text{Da is Yes} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times \\
+        T \, \wedge \, \text{Da is No} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+        F \, \wedge \, \text{Da is Yes} &amp; \text{Da } _\times &amp; \text{Ja } _\checkmark \\
+        F \, \wedge \, \text{Da is No} &amp; \text{Da } _\checkmark &amp; \text{Ja } _\times 
+    \end{array}\]
+
+<p>The key observation is the pattern: regardless of who we ask or what Da means, the answer Da is returned exactly when $x$ is true, and Ja otherwise.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="solution">Solution!</h1>
+
+<p>We have three goddesses, denoted by $T$, $F$, $R$ (for True, False, and Random): the Goddess of Truth, the Goddess of Lies, and the Goddess of Fate.</p>
+
+<p>Since we do not know which is which, we label them in arbitrary order as $G_1$, $G_2$, $G_3$. Our task is to identify the correct assignment among the 6 possibilities. For example, one such assignment is:</p>
+
+\[\begin{aligned}
+        G_1 &amp;\mapsto F \\
+        G_2 &amp;\mapsto T \\
+        G_3 &amp;\mapsto R
+    \end{aligned}\]
+
+<p>We now apply the construction developed in the previous sections. To determine whether a statement $x$ is true, we ask:</p>
+
+\[\text{Is it true that $(\psi \circ \varphi)(x)$?}\]
+
+<p>This way we neutralize the difficulties arising from the fact that one goddess always lies and that we do not speak the language of gods. We have effectively reduced the main puzzle to a simpler one:</p>
+
+<div style="border: 2px solid black; padding: 12px; margin: 1.5em 0;">
+  <em>
+    <strong>Puzzle 3.</strong>
+    Three goddesses stand before you, called T, F, and R. Both T and F now behave as truth-tellers; R answers truthfully or falsely at random.
+    You may ask three Yes/No questions, each addressed to exactly one goddess, in order to determine their identities.
+  </em>
+</div>
+
+<p>Let us first observe that if $R$ also always spoke truthfully, the puzzle would become easy. We could simply split the 6 possible assignments into two groups of three, say Group A and Group B, and ask:</p>
+
+\[\text{Is the correct assignment in Group A?}\]
+
+<p>After the first question, only 3 possibilities would remain. A second question would reduce this to at most 2, and a third would identify the correct one.</p>
+
+<p>Returning to the original setting, one of these bits is ‘foggy’, because $R$ answers at random. At first glance, this suggests that any answer from R is useless, but this is not quite true. We begin by asking $G_1$ the following question:</p>
+
+\[\text{Is it true that $G_2$ is $R$?}\]
+
+<p>The answer leads to the following chain of conclusions:</p>
+
+<ol>
+  <li>
+    If the answer is Yes, then either it is true and $G_2 = R$, or it is a lie,
+    which implies $G_1 = R$. In either case, we conclude that $G_3 \ne R$.
+  </li>
+  <li>
+    Similarly, if the answer is No, then $G_2 \ne R$.
+  </li>
+  <li>
+    In either case, we have identified at least one goddess who always speaks the truth.
+    From this point on, we can direct all remaining questions to her.
+  </li>
+  <li>
+    We are also left with only 4 possible permutations. For instance, if $G_2 \ne R$,
+    then both $(T, R, F)$ and $(F, R, T)$ are eliminated.
+  </li>
+</ol>
+
+<p>We are now done, because two questions are enough to determine which of the remaining 4 permutations is correct!</p>
+
+<div style="height: 1.0em;"></div>
+
+<h1 id="addendum-is-it-a-solution-or-the-solution">Addendum: Is it <em>a</em> solution or <em>the</em> solution?</h1>
+
+<p>The proverbial careful reader might have noticed that the question we asked $G_1$ in the previous section was somewhat arbitrary. It does the job, but is it really necessary?</p>
+
+<p>Let us take a step back. Any question we ask is, in effect, meant to identify a subset of permutations of $ T,F,R $ containing the true arrangement. In this sense, it can be viewed as equivalent to a question of the form:</p>
+
+\[\text{Does the correct permutation belong to the set } \mathcal{S}
+    \text{?}\]
+
+<p>where $\mathcal{S}$ may be any subset of the 6 possible permutations. Since each permutation either belongs to $\mathcal{S}$ or not, there are $2^6 = 64$ possible questions.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="what-makes-a-first-question-work">What makes a first question work?</h4>
+
+<p>This boils down to two simple requirements:</p>
+
+<ul>
+  <li>
+    <p>It must leave us with at most 4 candidate permutations. Otherwise, two further questions are not enough.</p>
+  </li>
+  <li>
+    <p>We must be able to identify at least one goddess who is not $R$.</p>
+  </li>
+</ul>
+
+<p>Let’s briefly explain why the second condition is necessary. Suppose our question concerns the subset</p>
+
+\[\mathcal{S} = \{ (R,F,T) , (F,R,T), (F,T,R)\}.\]
+
+<p>and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that if $G_1$ lies, then necessarily $G_1 = R$.</p>
+
+<figure style="max-width: 750px; margin: 1.5em auto; text-align: center;">
+  <img src="/assets/img/goddesses/goddesses_scenarios.png" alt="Scenarios" style="width: 100%; display: block;" />
+  <figcaption style="font-size: 0.8em; color: #000;">
+    The black dots represent the candidate permutations remaining after the first answer. Since we do not know whether the goddess is lying or not, we must consider both possibilities.
+  </figcaption>
+</figure>
+
+<p>Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. Any of the goddesses may still be $R$, so if we direct the second question, say, to $G_2$, the permutation $(F,R,T)$ always remains possible.</p>
+
+<p>If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. Since we cannot guarantee that $G_2 \not= R$, at least 3 permutations must still be considered: 1 arising from $G_2=R$ and 2 from $G_2\not=R$. This is too many to resolve with a single remaining question.</p>
+
+<p>The same argument applies if we direct the second question to $G_1$ or $G_3$ instead.</p>
+
+<div style="height: 1.0em;"></div>
+
+<h4 id="counting-the-possible-solutions">Counting the possible solutions</h4>
+
+<p>We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn’t matter, since both remain possible anyway; at this stage, we cannot exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.</p>
+
+<p>In summary, any valid subset $\mathcal{S}$:</p>
+
+<ul>
+  <li>
+    <p>May contain $(R,F,T)$ or not.</p>
+  </li>
+  <li>
+    <p>May contain $(R,T,F)$ or not.</p>
+  </li>
+  <li>
+    <p>Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$, but not all four.</p>
+  </li>
+</ul>
+
+<p>This gives 8 valid first questions in total, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.</p>
+
+<p>On the other hand, all of these questions serve the same purpose: to quickly isolate a truthful goddess we can rely on. In that sense, whether the puzzle has a ‘unique’ solution is largely a matter of interpretation.</p>
+
+<!-- # Beyond the Original Problem
+
+(TODO: Mention the paper of this dude from ArXiv.)
+
+<div class="lemma-box" markdown="1">
+
+**Problem** $~$ Let $n, m$ be integers with $1 \leq m \leq n$. Consider a group of $n$ gods. Among them, $n - m$ always speak truthfully; denote them by $T_1, \dots, T_{n-m}$. The remaining $m$ gods, denoted $R_1, \dots, R_m$, answer each question either truthfully or falsely at random. Initially, their identities are unknown.
+
+You may ask a number of Yes/No questions, each addressed to exactly one god, in order to determine the identity of every god. Let $G(n, m)$ denote the minimal number of questions required to do so.
+
+</div> -->
+
+<!-- $$
+\begin{array}{c|c|c}
+\text{Input} & \varphi & \neg \varphi \\
+\hline
+T_{\text{Da}} & \text{Da } _\checkmark & \text{Ja } _\times \\
+T_{\text{Ja}} & \text{Da } _\times & \text{Ja } _\checkmark \\
+F_{\text{Da}} & \text{Da } _\times & \text{Ja } _\checkmark \\
+F_{\text{Ja}} & \text{Da } _\checkmark & \text{Ja } _\times \\
+\end{array}
+$$ -->
+
+  </div>
+
+
+
+<!-- Share bar -->
+<div class="share-bar" aria-label="Share this post">
+  <span class="share-label">Share</span>
+
+  <button class="share-button" type="button" data-platform="x" aria-label="Share on X" title="Share on X">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.831L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.292 19.492h2.039L6.486 3.24H4.298l13.311 17.405z"/>
+      </svg>
+    </span>
+  </button>
+
+  <button class="share-button" type="button" data-platform="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+      </svg>
+    </span>
+  </button>
+
+  <button class="share-button" type="button" data-platform="facebook" aria-label="Share on Facebook" title="Share on Facebook">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.438H7.078v-3.489h3.047V9.414c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.971h-1.514c-1.491 0-1.955.931-1.955 1.887v2.262h3.328l-.532 3.489h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll(".share-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+      const platform = button.dataset.platform;
+
+      const shareUrls = {
+        x: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+      };
+
+      window.open(shareUrls[platform], "_blank", "noopener,noreferrer");
+    });
+  });
+</script>
+
+
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Paweł</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
