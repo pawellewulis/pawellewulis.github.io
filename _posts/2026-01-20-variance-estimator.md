@@ -49,22 +49,17 @@ There are many pairs $(\mu,\sigma)$ consistent with such an observation, for exa
 1. $\mu \approx 10$ and $\sigma$ very small,
 2. $\mu \approx 10$ and $\sigma \approx 50$.
 
-There is no way to decide which scenario is closer to the truth. The scale of $\sigma$ can vary by orders of magnitude while remaining compatible with the data. A single observation provides no reliable information about the variance, so an unbiased estimator of $\sigma^2$ cannot exist in this setting.
+There is no way to decide which scenario is closer to the truth. A single observation offers no reliable information about the variance.
 
-Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. While we still cannot estimate $\sigma$ precisely, we at least gain information about its order of magnitude. For instance, it is unlikely that $\sigma \ll 1$. This is weak information, but it is no longer nothing.
+Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. Now we can at least guess the order of magnitude of $\sigma$. For example, it is highly unlikely that $\sigma \ll 1$. Weak information, but no longer nothing.
 
-When the exact value of the mean is known, we are granted a point of reference. For fixed $\mu$, we can construct a slightly different unbiased estimator:
+With the exact value of the mean pinned down, we are granted a point of reference. It turns out that for fixed $\mu$ we can construct a slightly different unbiased estimator:
 
 $$
 \widehat{\sigma}^2_{\mu\text{ known}} := \frac{1}{n} \sum_{i=1}^n \left( X_i - \mu \right)^2
 $$
 
-As we can see, the $-1$ disappears from the denominator. To summarize:
-
-- For $n = 1$, it makes sense that the variance cannot be estimated unless $\mu$ is known.
-- Replacing $n$ with $n - 1$ in the denominator can be viewed as a premium paid for not knowing the exact value of $\mu$.
-
-The second point may seem vague for now. In the following sections, we make this intuition more precise.
+Replacing $n$ with $n - 1$ in the denominator might be viewed as a premium paid for not knowing the exact value of $\mu$. This point may seem vague for now. In the following sections, we make this intuition more precise.
 
 
 ### Orthogonal Projections
@@ -91,7 +86,7 @@ $$
 
 Here $\lVert \cdot \rVert_{\ell^2}$ denotes the Euclidean norm, the standard way mathematicians refer to 'distance from zero'.
 
-Neat. We are interested in the expected distance from $\boldsymbol{X} - \boldsymbol{C}$ to $\mathbf{0}$. Let's notice a simple but important property of this vector. If we define $X_i' = X_i - \overline{X}$ for $i = 1, \dots, n$, then
+Neat. We are interested in the expected distance from $\boldsymbol{X} - \boldsymbol{C}$ to $\mathbf{0}$. Let's notice a simple but important property of this vector: if we define $X_i' = X_i - \overline{X}$ for $i = 1, \dots, n$, then
 
 $$
 \langle \boldsymbol{X} - \boldsymbol{C}, \mathbf{1} \rangle
@@ -111,13 +106,13 @@ $$
 x_1 + \dots + x_n = 0.
 $$
 
-Let us take a look at a simple case in dimension two.
+Let's take a look at a simple case in dimension two.
 
 <img src="/assets/img/variance/projection_single.png"
      alt="Variance estimator animation"
      style="max-width: 600px; width: 100%; display: block; margin: 1.5em auto;">
 
-Even though the scenario depicted above may appear overly simplistic, it still allows for a few useful observations.
+Even though the scenario depicted above may appear simplistic, it still allows for a few useful observations.
 
 - If $\mu = 0$, the squared distance of the blue point from the origin represents $n\,\widehat{\sigma}^2_{\mu\text{ known}}$. Changing $\mu$ simply translates the point along the $[1,1]^\top$ direction, while its projection remains fixed.
 - Similarly, the squared distance of the red point from the origin represents $(n-1)\,\widehat{\sigma}^2$, where we pretend that the true value of $\mu$ remains unknown.
@@ -184,8 +179,8 @@ $n - 1$ degrees of freedom.
 
 What is the main source of this discrepancy? Consider a blue point
 $\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
-blue mass, it contributes substantially to the average deviation. After
-projection, however, the situation looks different. The same point is mapped to
+blue mass, it contributes a lot to the average deviation. However, after
+projection the situation looks different. The same point is now mapped to
 $\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
 $\mathbf{0}$.
 
