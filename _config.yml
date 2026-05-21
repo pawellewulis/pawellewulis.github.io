@@ -1,0 +1,17 @@
+title: ""
+# description: "Math, quant stuff, and other distractions."
+
+author: "Paweł"
+
+theme: minima
+markdown: kramdown
+
+kramdown:
+  input: kramdown
+  syntax_highlighter: rouge
+
+header_pages:
+ - index.md
+ - about.md
+
+version: 2
