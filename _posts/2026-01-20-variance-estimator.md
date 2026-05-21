@@ -25,7 +25,7 @@ $$
 
 where $X_1,\dots,X_n$ are independent draws from the same distribution and $\overline{X}$ denotes the sample mean.
 
-Every so often, someone in the room eventually asks:
+From time to time, someone in the room eventually asks:
 
 <div class="aside" markdown="1">
 *Why do we have $n-1$ in the denominator? The expression looks almost like an average of $n$ squared deviations, so why isn't the denominator simply $n$?*
