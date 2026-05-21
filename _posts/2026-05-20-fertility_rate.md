@@ -11,17 +11,17 @@ title: "Fertility Rates Are Tricky"
        alt="ASFR in Poland of 2014"
        style="width: 100%; display: block;">
   <figcaption style="font-size: 0.8em; color: #000;">
-    Włodzimierz Tetmajer, <em>The Artist’s Family</em> (1905)
+    Włodzimierz Tetmajer, <em>The Artist's Family</em> (1905)
   </figcaption>
 </figure>
 
 In recent years, demography has become a hot topic in political debate. More and more countries describe their long-term trends as bad, with fewer children being born and populations aging rapidly.
 
-To quantify how bad ‘bad’ is, we use various metrics. The most widely used of these metrics is the ***total fertility rate*** (TFR) and it's possibly the best proxy we have for the expected number of children per woman. However, this statistic is also far trickier than many might assume.
+To quantify how bad 'bad' is, we use various metrics. The most widely used of these metrics is the ***total fertility rate*** (TFR) and it's possibly the best proxy we have for the expected number of children per woman. However, this statistic is also far trickier than many might assume.
 
 
 
-# Total fertility rate: what it is (and isn’t)
+# Total fertility rate: what it is (and isn't)
 
 Before we present the full definition and motivation behind it, it's better to first explain what TFR *is not*. 
 
@@ -29,7 +29,7 @@ Before we present the full definition and motivation behind it, it's better to f
 
 This idea falls apart fairly quickly. The number of children our mothers or grandmothers had doesn't really tell us much about the likelihood that a woman of a certain age would consider having a child *now*.
 
-To study demographic trends, we need a metric that is not ‘contaminated’ by lifestyles, economic conditions, and decisions from many years ago.
+To study demographic trends, we need a metric that is not 'contaminated' by lifestyles, economic conditions, and decisions from many years ago.
 
 
 #### Wrong approach 2: Confusing TFR with Birth Rate
@@ -38,11 +38,11 @@ Ok, what about something like the number of births per 1,000 people in the past 
 
 This metric is called the ***(crude) birth rate*** (BR). Since both BR and TFR are supposed to capture general demographic trends, the two are quite frequently confused. Regardless, there are some serious caveats:
 
-- If we consider ‘per 1,000 people’ instead of ‘per 1,000 women’, we expose ourselves to the issue of skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).
+- If we consider 'per 1,000 people' instead of 'per 1,000 women', we expose ourselves to the issue of skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).
 
-- Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let's relocate everyone above the age of 60 to the Côte d’Azur or Spain. The BR suddenly improves, even though nothing changes about how many children women are willing to have. 
+- Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let's relocate everyone above the age of 60 to the Côte d'Azur or Spain. The BR suddenly improves, even though nothing changes about how many children women are willing to have. 
 
-- Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we’re all dead anyway.
+- Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we're all dead anyway.
 
 #### Wrong approach 3: Confusing TFR with GFR
 
@@ -97,7 +97,7 @@ In fires of failed experiments and doubts we forged a metric that satisfies seve
 
 ### **Myth 1:** If TFR sits below ~2.1, then the population of a country decreases.
 
-The value of 2.1 refers to what’s called the ***replacement rate***. I admit the title of this section is a bit provocative, because it’s not really a myth… at least not in the long run! And it might take decades before we see any 'long run'. It turns out that, locally, many interesting and counterintuitive scenarios may occur.
+The value of 2.1 refers to what's called the ***replacement rate***. I admit the title of this section is a bit provocative, because it's not really a myth… at least not in the long run! And it might take decades before we see any 'long run'. It turns out that, locally, many interesting and counterintuitive scenarios may occur.
 
 Let us begin by stating the obvious: 
 
