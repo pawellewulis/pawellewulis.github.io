@@ -158,7 +158,7 @@ One could, of course, point out that the scenario I described is artificial and 
        alt="TFR and Pop Growth"
        style="width: 100%;">
   <figcaption style="font-size: 0.8em; color:  #000;">
-    In large countries with TFR below the replacement rate, the population is often still growing, due to demographic momentum. Although we observe a neat linear relationship between TFR and population growth, it primarily reflects short-term dynamics. In the long run, the entire line is expected to shift downward. The ten largest deviations from the fitted line have been highlighted.
+    In large countries with TFR below the replacement rate, the population is often still growing, due to demographic momentum. Although we observe a neat linear relationship between TFR and population growth, it mostly reflects short-term dynamics. In the long run, the entire line is expected to shift downward. The ten largest deviations from the fitted line have been highlighted.
     <br>
     <em>Data source: World Bank.</em>
   </figcaption>
