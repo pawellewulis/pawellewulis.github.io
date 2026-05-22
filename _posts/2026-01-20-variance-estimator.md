@@ -177,7 +177,7 @@ We observe that the deviation of the red dots is systematically smaller, since o
 direction is removed entirely. To see what's the main source of this discrepancy, let's consider a blue point
 $\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
 blue mass, it contributes a lot to the average deviation. However, after
-projection the situation looks different. The same point is now mapped to
+projection the same point is mapped to
 $\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
 the center of the red mass.
 
