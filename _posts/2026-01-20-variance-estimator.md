@@ -38,7 +38,7 @@ There are two answers one usually hears:
 
 The first answer is formally correct, but it explains little. The second one may feel hand-wavy. Why should degrees of freedom matter at all? Where, exactly, did the missing dimension go?
 
-Since the difference between $\frac{1}{n}$ and $\frac{1}{n-1}$ is most visible for small values of $n$, let us begin by examining what happens in that regime.
+Since the difference between $\frac{1}{n}$ and $\frac{1}{n-1}$ is most visible for small values of $n$, let us begin by examining what happens in that regime. 
 
 
 ### Some Intuition: Case $n = 1$
@@ -51,7 +51,7 @@ There are many pairs $(\mu,\sigma)$ consistent with such an observation, for exa
 
 There is no way to decide which scenario is closer to the truth. A single observation offers no reliable information about the variance.
 
-Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. Now we can at least guess the order of magnitude of $\sigma$. For example, it is highly unlikely that $\sigma \ll 1$. Weak information, but no longer nothing.
+Let's add another piece of information: we're additionally told that $\mu = 15$. Now we can at least try to guess that, for example, $\sigma \ll 1$. Weak information, but no longer nothing.
 
 With the exact value of the mean pinned down, we are granted a point of reference. It turns out that for fixed $\mu$ we can construct a slightly different unbiased estimator:
 
@@ -169,20 +169,17 @@ We proceed in the same way as in the previous subsection:
 
 As the animation shows, both estimators remain constant as $\mu$ varies.
 This is expected: $\widehat{\sigma}^2_{\mu \text{ known}}$ is proportional to
-the distance from the center of the blue mass, so translating it changes nothing,
-while $\widehat{\sigma}^2$ is based on projections, and translating the blue mass
-along the $[1,1]^\top$ direction does not affect its projection.
+the distance from the center of the blue mass, so translating it changes nothing. 
+On the other hand, $\widehat{\sigma}^2$ is based on projections that remain fixed when we move the blue mass
+along the $[1,1]^\top$ vector.
 
 We observe that the deviation of the red dots is systematically smaller, since one
-direction is removed entirely. This is precisely the geometric origin of the
-$n - 1$ degrees of freedom.
-
-What is the main source of this discrepancy? Consider a blue point
+direction is removed entirely. To see what's the main source of this discrepancy, let's consider a blue point
 $\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
 blue mass, it contributes a lot to the average deviation. However, after
 projection the situation looks different. The same point is now mapped to
 $\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
-$\mathbf{0}$.
+the center of the red mass.
 
 This reflects the fact that observing $X_1 = 4.01$ and $X_2 = 4.03$ with $\mu$
 unknown naturally suggests values concentrated around $4$ and a small variance.
@@ -206,7 +203,7 @@ $$
 \left( X_i - \overline{X} \right)^2 ,
 $$
 
-As we have already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let's re-introduce the following notation:
+As we've already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let's re-introduce the following notation:
 
 $$
 \text{the sample vector}\quad
@@ -226,7 +223,7 @@ X_{n}
 \end{bmatrix}.
 $$
 
-We can then form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:
+We can form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:
 
 $$
 \boldsymbol{X} - \boldsymbol{1} \overline{X} 
@@ -238,7 +235,7 @@ X_{n} - \overline{X}
 \end{bmatrix}.
 $$
 
-We can now see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us
+We see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us
 
 $$
 \widehat{\theta}
@@ -258,7 +255,7 @@ $$
 \left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right).
 $$
 
-We notice that the expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ is meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies
+The expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ looks meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies
 
 $$
 \boldsymbol{P} \boldsymbol{X}
@@ -276,7 +273,7 @@ $$
 \frac{1}{n} \boldsymbol{1}^\top \boldsymbol{X}.
 $$
 
-Of course, the dot product above could be also described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,
+Of course, the dot product above could also be described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,
 
 $$
 \boldsymbol{X} - \overline{X} \boldsymbol{1}
@@ -332,7 +329,7 @@ $$
 The matrix/operator $\boldsymbol{P}$ has two critical properties:
 
 1. It is symmetric, so $\boldsymbol{P}^\top = \boldsymbol{P}$.
-2. It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing, because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.
+2. It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.
 
 In other words, it's an orthogonal projection (as already observed in the previous sections). Thus, we get
 
@@ -414,7 +411,7 @@ $$
 <span class="qed">□</span>
 
 
-In our discussion we are interested in calculating
+In our discussion, we are interested in calculating
 $\mathbf{E} \left[ \boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X} \right]$.
 This turns out to be quite simple, because the sum of all the entries vanishes. We thus have
 
@@ -433,7 +430,7 @@ That's all. To make the estimator unbiased, we just divide $\widehat{\theta}$ by
 
 ### Appendix: What if $\mu$ is known?
 
-Let us follow the same geometric argument. First, we note that
+Let us follow the same geometric argument as above. First, we note that
 
 $$
 \mathbf{E}[\widehat{\sigma}^2_{\text{$\mu$ known}}]
