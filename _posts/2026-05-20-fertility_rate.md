@@ -99,7 +99,7 @@ In fires of failed experiments and doubts we forged a metric that satisfies seve
 
 ### **Myth 1:** If TFR sits below ~2.1, then the population of a country decreases.
 
-The value of 2.1 refers to what's called the ***replacement rate***. I admit the title of this section is a bit provocative, because it's not really a myth… at least not in the long run! And it might take decades before we see any 'long run'. It turns out that, locally, many interesting and counterintuitive scenarios may occur.
+The value of 2.1 refers to what's called the ***replacement rate***. I admit the title of this section is a bit provocative, because it's not really a myth… in the long run! And it might take decades before we see any 'long run'. It turns out that, locally, many interesting and counterintuitive scenarios may occur.
 
 Let us begin by stating the obvious: 
 
@@ -107,7 +107,7 @@ $$ \Delta \text{Population} = \text{Births} - \text{Deaths} + \text{Net Migratio
 
 If we forget about the migration effects, then the population grows simply if more people are born than die. As a consequence, if a certain country is young on average, then to get $\Delta \text{Population} > 0$ we don't even need that many births if the number of deaths stays low.
 
-**Example.** Consider a country called Imaginationland. It satisfies a few conditions:
+**Example.** Consider a country called Imaginationland. Let it satisfy a few conditions:
 
 - In year 2000 it was **occupied only by people of age 40 or younger**. In each age group there were exactly 100,000 of both women and men.
 
