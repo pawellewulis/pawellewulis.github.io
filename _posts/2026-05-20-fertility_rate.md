@@ -43,7 +43,7 @@ This metric is called the ***(crude) birth rate*** (BR). Since both BR and TFR a
 
 - Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let's relocate everyone above the age of 60 to the Côte d'Azur or Spain. The BR suddenly improves, even though nothing has changed about how many children women are willing to have. 
 
-- Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we're all dead anyway.
+<!-- - Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we're all dead anyway. -->
 
 
 #### Wrong approach 3: Confusing TFR with GFR
