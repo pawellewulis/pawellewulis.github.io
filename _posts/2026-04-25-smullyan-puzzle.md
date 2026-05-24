@@ -122,26 +122,22 @@ Let's organize our discussion a bit by introducing some notation. Assume that $x
 
 $$ \text{Is it true that $x$?} $$
 
-For instance, in one of the examples above we had $x = \text{"2+2=4"}$. In such cases, we expect one guardian to answer Yes and the other one to answer No. However, we also saw that the question "Do you have the key?" can result in two No's (or two Yes's). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as
-
-$$ x = \text{"Guardian A has the key."}$$
-
-Now the logical value of the statement remains independent of the recipient. In practice, however, we will sometimes use simpler formulations such as "You have the key" and ignore this detail.
+For instance, in one of the examples above we had $x = \text{"2+2=4"}$.
 
 Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.
 
-Let's describe this reasoning using our rudimentary formalism. In this framework, it is more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:
+Let's describe this reasoning using our rudimentary formalism. In this framework, it might actually be slightly more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:
 
 - If we ask $T$, we can simply ask whether $x$ is true.
 
 - If we ask $F$, we instead ask whether $\neg x$ is true. 
 
-We can combine these two points into a single question. Define
+We can combine these two points into a single question:
 
 $$ \varphi(x) := (x \, \wedge \, \text{You are $T$}) \, \lor 
     \, (\neg x \, \wedge \, \text{You are $F$}). $$
 
-Now, we ask any guardian:
+Now, we simply ask any guardian:
 
 $$ \text{Is it true that $\varphi(x)$?}$$
 
@@ -158,7 +154,18 @@ F & \text{Yes } _\times & \text{No } _\checkmark \\
 $$
 
 
-Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance "You have the key."
+Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance "The guardian on my right has the key." or anything of this sort.
+
+
+
+<div style="height: 1.0em;"></div>
+
+<!-- #### Little caveat
+
+When trying out the warm-up questions we saw that "Do you have the key?" can result in two No's (or two Yes's). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as
+
+$$ x = \text{"Guardian A has the key."}$$ -->
+
 
 <div style="height: 1.0em;"></div>
 
@@ -223,7 +230,7 @@ Another complication is that the goddesses from the Smullyan puzzle do not simpl
   </em>
 </div>
 
-Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we cannot determine the logical values of the following two statements at the same time:
+Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we can't determine the logical values of the following two statements at the same time:
 
 - Da stands for Yes.
 
@@ -411,7 +418,7 @@ The same argument applies if we direct the second question to $G_1$ or $G_3$ ins
 
 #### Counting the possible solutions
 
-We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn't matter, since both remain possible anyway; at this stage, we cannot exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.
+We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn't matter, since both remain possible anyway; at this stage, we can't exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.
 
 In summary, any valid subset $\mathcal{S}$:
 

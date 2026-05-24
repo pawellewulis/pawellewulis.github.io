@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-05-22T00:17:18+02:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Fertility Rates Are Tricky</title><link href="http://localhost:4000/2026/05/20/fertility_rate.html" rel="alternate" type="text/html" title="Fertility Rates Are Tricky" /><published>2026-05-20T00:00:00+02:00</published><updated>2026-05-20T00:00:00+02:00</updated><id>http://localhost:4000/2026/05/20/fertility_rate</id><content type="html" xml:base="http://localhost:4000/2026/05/20/fertility_rate.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-05-24T23:07:40+02:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Fertility Rates Are Tricky</title><link href="http://localhost:4000/2026/05/20/fertility_rate.html" rel="alternate" type="text/html" title="Fertility Rates Are Tricky" /><published>2026-05-20T00:00:00+02:00</published><updated>2026-05-20T00:00:00+02:00</updated><id>http://localhost:4000/2026/05/20/fertility_rate</id><content type="html" xml:base="http://localhost:4000/2026/05/20/fertility_rate.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
   <img src="/assets/img/fertility_rate/tetmajer.png" alt="ASFR in Poland of 2014" style="width: 100%; display: block;" />
   <figcaption style="font-size: 0.8em; color: #000;">
     Włodzimierz Tetmajer, <em>The Artist's Family</em> (1905)
@@ -7,7 +7,7 @@
 
 <p>In recent years, demography has become a hot topic in political debate. More and more countries describe their long-term trends as bad, with fewer children being born and populations aging rapidly.</p>
 
-<p>To quantify how bad ‘bad’ is, we use a lot of different metrics. The most widely used of them is the <strong><em>total fertility rate</em></strong> (TFR) and it’s possibly the best proxy we’ve got for the expected number of children per woman. However, this statistic is also far trickier than many might assume.</p>
+<p>To quantify how bad ‘bad’ is, we use a lot of different metrics. Whenever we analyze the expected number of children per woman, we usually refer to the <strong><em>total fertility rate</em></strong> (TFR). It’s possibly the best proxy we’ve got, but it’s also far trickier than many might assume.</p>
 
 <h1 id="total-fertility-rate-what-it-is-and-isnt">Total fertility rate: what it is (and isn’t)</h1>
 
@@ -15,7 +15,7 @@
 
 <h4 id="wrong-approach-1-just-take-the-average-number-of-children-per-woman">Wrong approach 1: Just take the average number of children per woman?</h4>
 
-<p>This idea falls apart fairly quickly. The number of children our mothers or grandmothers had doesn’t really tell us much about the likelihood that a woman of a certain age would consider having a child <em>now</em>.</p>
+<p>This idea falls apart very quickly. The number of children our mothers or grandmothers had doesn’t really tell us much about the likelihood that a woman of a certain age would consider having a child <em>now</em>.</p>
 
 <p>To study demographic trends, we need a metric that is not ‘contaminated’ by lifestyles, economic conditions, and decisions from many years ago.</p>
 
@@ -23,19 +23,18 @@
 
 <p>Ok, what about something like the number of births per 1,000 people in the past year? That surely solves the issue of recency mentioned above, right?</p>
 
-<p>This metric is called the <strong><em>(crude) birth rate</em></strong> (BR). Since both BR and TFR are supposed to capture general demographic trends, the two are quite frequently confused. Regardless, there are some serious caveats:</p>
+<p>This metric is called the <strong><em>(crude) birth rate</em></strong> (BR). Since both BR and TFR are supposed to detect general demographic trends, the two are frequently confused. Regardless of that, there are some serious caveats:</p>
 
 <ul>
   <li>
-    <p>If we consider ‘per 1,000 people’ instead of ‘per 1,000 women’, we expose ourselves to the issue of skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).</p>
+    <p>If we consider ‘per 1,000 people’ instead of ‘per 1,000 women’, we may expose ourselves to skewed gender ratios. For example, in the United Arab Emirates ~64% of the population are men (2026).</p>
   </li>
   <li>
-    <p>Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let’s relocate everyone above the age of 60 to the Côte d’Azur or Spain. The BR suddenly improves, even though nothing changes about how many children women are willing to have.</p>
-  </li>
-  <li>
-    <p>Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we’re all dead anyway.</p>
+    <p>Imagine a country where politicians are expected to do something about a low BR. They come up with a brilliant idea: let’s relocate everyone above the age of 60 to the Côte d’Azur or Spain. The BR suddenly improves, even though nothing has changed about how many children women are willing to have.</p>
   </li>
 </ul>
+
+<!-- - Children do not contribute to BR either, so relocating them would also help in the short run. And, as the saying goes, in the long run we're all dead anyway. -->
 
 <h4 id="wrong-approach-3-confusing-tfr-with-gfr">Wrong approach 3: Confusing TFR with GFR</h4>
 
@@ -91,7 +90,7 @@
 
 <h3 id="myth-1-if-tfr-sits-below-21-then-the-population-of-a-country-decreases"><strong>Myth 1:</strong> If TFR sits below ~2.1, then the population of a country decreases.</h3>
 
-<p>The value of 2.1 refers to what’s called the <strong><em>replacement rate</em></strong>. I admit the title of this section is a bit provocative, because it’s not really a myth… at least not in the long run! And it might take decades before we see any ‘long run’. It turns out that, locally, many interesting and counterintuitive scenarios may occur.</p>
+<p>The value of 2.1 refers to what’s called the <strong><em>replacement rate</em></strong>. I admit the title of this section is a bit provocative, because it’s not really a myth… in the long run! And it might take decades before we see any ‘long run’. It turns out that, locally, many interesting and counterintuitive scenarios may occur.</p>
 
 <p>Let us begin by stating the obvious:</p>
 
@@ -99,7 +98,7 @@
 
 <p>If we forget about the migration effects, then the population grows simply if more people are born than die. As a consequence, if a certain country is young on average, then to get $\Delta \text{Population} &gt; 0$ we don’t even need that many births if the number of deaths stays low.</p>
 
-<p><strong>Example.</strong> Consider a country called Imaginationland. It satisfies a few conditions:</p>
+<p><strong>Example.</strong> Consider a country called Imaginationland. Let it satisfy a few conditions:</p>
 
 <ul>
   <li>
@@ -148,7 +147,7 @@
 <figure style="max-width: 800px; text-align: center;">
   <img src="/assets/img/fertility_rate/tfr_vs_popgro.png" alt="TFR and Pop Growth" style="width: 100%;" />
   <figcaption style="font-size: 0.8em; color:  #000;">
-    In large countries with TFR below the replacement rate, the population is often still growing, due to demographic momentum. Although we observe a neat linear relationship between TFR and population growth, it primarily reflects short-term dynamics. In the long run, the entire line is expected to shift downward. The ten largest deviations from the fitted line have been highlighted.
+    In large countries with TFR below the replacement rate, the population is often still growing, due to demographic momentum. Although we observe a neat linear relationship between TFR and population growth, it mostly reflects short-term dynamics. In the long run, the entire line is expected to shift downward. The ten largest deviations from the fitted line have been highlighted.
     <br />
     <em>Data source: World Bank.</em>
   </figcaption>
@@ -158,9 +157,9 @@
 
 <p>Not quite, the main culprit is the <strong><em>sex ratio at birth</em></strong>: more boys than girls are born, and the ratio is usually estimated at around 105/100. To ensure full replacement (1 woman per 1 woman), roughly ~2.05 children must be born per woman on average. Even if no one died before the end of the reproductive age, the sex ratio at birth would still be hardwired by nature itself.</p>
 
-<p>In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability, which has an almost negigible effect on the overall replacement rate. In such a scenario, all one needs is to bump it up by another ~0.02-0.03 for good measure.</p>
+<p>In most high-income countries, a newborn girl is expected to live to at least age 40 with 98-99% probability. In such a case, all one needs is to bump the replacement rate up by another ~0.02-0.03 for good measure.</p>
 
-<p>The last remark here is that in many parts of the world premature mortality (especially infant mortality) remains a serious issue. In such cases, the <em>true</em> replacement rate can be much higher than 2.1.</p>
+<p>The last remark here is that in many parts of the world premature mortality (especially infant mortality) still remains a serious issue. In these cases, the <em>true</em> replacement rate can obviously be much higher than 2.1.</p>
 
 <h3 id="myth-3-persistently-low-fertility-rates-eventually-lead-to-a-self-reinforcing-aging-spiral"><strong>Myth 3:</strong> Persistently low fertility rates eventually lead to a self-reinforcing aging spiral.</h3>
 
@@ -387,15 +386,11 @@ It turns out that in some exotic scenarios this assumption can be broken. Imagin
 
 \[\text{Is it true that $x$?}\]
 
-<p>For instance, in one of the examples above we had $x = \text{“2+2=4”}$. In such cases, we expect one guardian to answer Yes and the other one to answer No. However, we also saw that the question “Do you have the key?” can result in two No’s (or two Yes’s). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as</p>
-
-\[x = \text{"Guardian A has the key."}\]
-
-<p>Now the logical value of the statement remains independent of the recipient. In practice, however, we will sometimes use simpler formulations such as “You have the key” and ignore this detail.</p>
+<p>For instance, in one of the examples above we had $x = \text{“2+2=4”}$.</p>
 
 <p>Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.</p>
 
-<p>Let’s describe this reasoning using our rudimentary formalism. In this framework, it is more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:</p>
+<p>Let’s describe this reasoning using our rudimentary formalism. In this framework, it might actually be slightly more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:</p>
 
 <ul>
   <li>
@@ -406,12 +401,12 @@ It turns out that in some exotic scenarios this assumption can be broken. Imagin
   </li>
 </ul>
 
-<p>We can combine these two points into a single question. Define</p>
+<p>We can combine these two points into a single question:</p>
 
 \[\varphi(x) := (x \, \wedge \, \text{You are $T$}) \, \lor 
     \, (\neg x \, \wedge \, \text{You are $F$}).\]
 
-<p>Now, we ask any guardian:</p>
+<p>Now, we simply ask any guardian:</p>
 
 \[\text{Is it true that $\varphi(x)$?}\]
 
@@ -424,7 +419,15 @@ T &amp; \text{Yes } _\checkmark &amp; \text{No } _\times \\
 F &amp; \text{Yes } _\times &amp; \text{No } _\checkmark \\
 \end{array}\]
 
-<p>Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance “You have the key.”</p>
+<p>Any Yes answer means that $v(x)=1$, regardless of which guardian we ask. This fully neutralizes the liar. Now we only need to choose $x$ appropriately, for instance “The guardian on my right has the key.” or anything of this sort.</p>
+
+<div style="height: 1.0em;"></div>
+
+<!-- #### Little caveat
+
+When trying out the warm-up questions we saw that "Do you have the key?" can result in two No's (or two Yes's). This happens because we are effectively asking two different questions, depending on the recipient. To fully align with the introduced formalization, we may simply label the guardians as Guardian A and Guardian B, and consider a statement such as
+
+$$ x = \text{"Guardian A has the key."}$$ -->
 
 <div style="height: 1.0em;"></div>
 
@@ -479,7 +482,7 @@ F &amp; \text{Yes } _\times &amp; \text{No } _\checkmark \\
   </em>
 </div>
 
-<p>Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we cannot determine the logical values of the following two statements at the same time:</p>
+<p>Let us label the aliens, not very creatively, as Alien A and Alien B. Notice that we can’t determine the logical values of the following two statements at the same time:</p>
 
 <ul>
   <li>
@@ -657,7 +660,7 @@ F &amp; \text{Yes } _\times &amp; \text{No } _\checkmark \\
 
 <h4 id="counting-the-possible-solutions">Counting the possible solutions</h4>
 
-<p>We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn’t matter, since both remain possible anyway; at this stage, we cannot exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.</p>
+<p>We now understand the conditions that the first question must satisfy. Let us count the valid choices of $\mathcal{S}$, the subset of permutations specified by the question to $G_1$. First, whether $\mathcal{S}$ contains $(R,F,T)$ or $(R,T,F)$ doesn’t matter, since both remain possible anyway; at this stage, we can’t exclude $G_1=R$. Among the remaining 4 permutations, we must distinguish between the cases $G_2=R$ and $G_3=R$, so that we can identify a non-$R$ goddess and direct the remaining two questions to her.</p>
 
 <p>In summary, any valid subset $\mathcal{S}$:</p>
 
@@ -740,7 +743,7 @@ There are many pairs $(\mu,\sigma)$ consistent with such an observation, for exa
 
 <p>There is no way to decide which scenario is closer to the truth. A single observation offers no reliable information about the variance.</p>
 
-<p>Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. Now we can at least guess the order of magnitude of $\sigma$. For example, it is highly unlikely that $\sigma \ll 1$. Weak information, but no longer nothing.</p>
+<p>Let’s add another piece of information: we’re additionally told that $\mu = 15$. Now we can at least try to guess that, for example, $\sigma \ll 1$. Weak information, but no longer nothing.</p>
 
 <p>With the exact value of the mean pinned down, we are granted a point of reference. It turns out that for fixed $\mu$ we can construct a slightly different unbiased estimator:</p>
 
@@ -834,20 +837,17 @@ projection of $(X_1, X_2)$ onto the line $X_1 + X_2 = 0$.</li>
 
 <p>As the animation shows, both estimators remain constant as $\mu$ varies.
 This is expected: $\widehat{\sigma}^2_{\mu \text{ known}}$ is proportional to
-the distance from the center of the blue mass, so translating it changes nothing,
-while $\widehat{\sigma}^2$ is based on projections, and translating the blue mass
-along the $[1,1]^\top$ direction does not affect its projection.</p>
+the distance from the center of the blue mass, so translating it changes nothing. 
+On the other hand, $\widehat{\sigma}^2$ is based on projections that remain fixed when we move the blue mass
+along the $[1,1]^\top$ vector.</p>
 
 <p>We observe that the deviation of the red dots is systematically smaller, since one
-direction is removed entirely. This is precisely the geometric origin of the
-$n - 1$ degrees of freedom.</p>
-
-<p>What is the main source of this discrepancy? Consider a blue point
+direction is removed entirely. To see what’s the main source of this discrepancy, let’s consider a blue point
 $\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
 blue mass, it contributes a lot to the average deviation. However, after
-projection the situation looks different. The same point is now mapped to
+projection the same point is mapped to
 $\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
-$\mathbf{0}$.</p>
+the center of the red mass.</p>
 
 <p>This reflects the fact that observing $X_1 = 4.01$ and $X_2 = 4.03$ with $\mu$
 unknown naturally suggests values concentrated around $4$ and a small variance.
@@ -866,7 +866,7 @@ irrelevant for large $n$, but critical when the sample is small.</p>
 \[\widehat{\theta} := \sum_{i=1}^n 
 \left( X_i - \overline{X} \right)^2 ,\]
 
-<p>As we have already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let’s re-introduce the following notation:</p>
+<p>As we’ve already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let’s re-introduce the following notation:</p>
 
 \[\text{the sample vector}\quad
 \boldsymbol{X} =
@@ -884,7 +884,7 @@ X_{n}
 1
 \end{bmatrix}.\]
 
-<p>We can then form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:</p>
+<p>We can form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:</p>
 
 \[\boldsymbol{X} - \boldsymbol{1} \overline{X} 
 =
@@ -894,7 +894,7 @@ X_{1} - \overline{X}  \\
 X_{n} - \overline{X} 
 \end{bmatrix}.\]
 
-<p>We can now see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us</p>
+<p>We see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us</p>
 
 \[\widehat{\theta}
 =
@@ -910,7 +910,7 @@ X_{n} - \overline{X}
 \left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right)^\top
 \left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right).\]
 
-<p>We notice that the expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ is meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies</p>
+<p>The expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ looks meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies</p>
 
 \[\boldsymbol{P} \boldsymbol{X}
 =
@@ -924,7 +924,7 @@ X_{n} - \overline{X}
 =
 \frac{1}{n} \boldsymbol{1}^\top \boldsymbol{X}.\]
 
-<p>Of course, the dot product above could be also described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,</p>
+<p>Of course, the dot product above could also be described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,</p>
 
 \[\boldsymbol{X} - \overline{X} \boldsymbol{1}
 =
@@ -975,7 +975,7 @@ X_{n} - \overline{X}
 
 <ol>
   <li>It is symmetric, so $\boldsymbol{P}^\top = \boldsymbol{P}$.</li>
-  <li>It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing, because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.</li>
+  <li>It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.</li>
 </ol>
 
 <p>In other words, it’s an orthogonal projection (as already observed in the previous sections). Thus, we get</p>
@@ -1042,7 +1042,7 @@ $\mathbf{E} \left[ X_i X_j \right] = \mathbf{E} \left[ X^2 \right]$ and we notic
 
 <p><span class="qed">□</span></p>
 
-<p>In our discussion we are interested in calculating
+<p>In our discussion, we are interested in calculating
 $\mathbf{E} \left[ \boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X} \right]$.
 This turns out to be quite simple, because the sum of all the entries vanishes. We thus have</p>
 
@@ -1056,7 +1056,7 @@ This turns out to be quite simple, because the sum of all the entries vanishes. 
 
 <h3 id="appendix-what-if-mu-is-known">Appendix: What if $\mu$ is known?</h3>
 
-<p>Let us follow the same geometric argument. First, we note that</p>
+<p>Let us follow the same geometric argument as above. First, we note that</p>
 
 \[\mathbf{E}[\widehat{\sigma}^2_{\text{$\mu$ known}}]
 =

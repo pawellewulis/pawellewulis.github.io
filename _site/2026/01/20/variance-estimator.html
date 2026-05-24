@@ -106,7 +106,7 @@ There are many pairs $(\mu,\sigma)$ consistent with such an observation, for exa
 
 <p>There is no way to decide which scenario is closer to the truth. A single observation offers no reliable information about the variance.</p>
 
-<p>Now suppose $\mu = 15$ is known and we observe $X_1 = 10$. Now we can at least guess the order of magnitude of $\sigma$. For example, it is highly unlikely that $\sigma \ll 1$. Weak information, but no longer nothing.</p>
+<p>Let’s add another piece of information: we’re additionally told that $\mu = 15$. Now we can at least try to guess that, for example, $\sigma \ll 1$. Weak information, but no longer nothing.</p>
 
 <p>With the exact value of the mean pinned down, we are granted a point of reference. It turns out that for fixed $\mu$ we can construct a slightly different unbiased estimator:</p>
 
@@ -200,20 +200,17 @@ projection of $(X_1, X_2)$ onto the line $X_1 + X_2 = 0$.</li>
 
 <p>As the animation shows, both estimators remain constant as $\mu$ varies.
 This is expected: $\widehat{\sigma}^2_{\mu \text{ known}}$ is proportional to
-the distance from the center of the blue mass, so translating it changes nothing,
-while $\widehat{\sigma}^2$ is based on projections, and translating the blue mass
-along the $[1,1]^\top$ direction does not affect its projection.</p>
+the distance from the center of the blue mass, so translating it changes nothing. 
+On the other hand, $\widehat{\sigma}^2$ is based on projections that remain fixed when we move the blue mass
+along the $[1,1]^\top$ vector.</p>
 
 <p>We observe that the deviation of the red dots is systematically smaller, since one
-direction is removed entirely. This is precisely the geometric origin of the
-$n - 1$ degrees of freedom.</p>
-
-<p>What is the main source of this discrepancy? Consider a blue point
+direction is removed entirely. To see what’s the main source of this discrepancy, let’s consider a blue point
 $\boldsymbol{X} = (4.01, 4.03)$ under $\mu = 2$. Being far from the center of the
 blue mass, it contributes a lot to the average deviation. However, after
-projection the situation looks different. The same point is now mapped to
+projection the same point is mapped to
 $\boldsymbol{P}(\boldsymbol{X}) = (-0.01, 0.01)$, which lies very close to
-$\mathbf{0}$.</p>
+the center of the red mass.</p>
 
 <p>This reflects the fact that observing $X_1 = 4.01$ and $X_2 = 4.03$ with $\mu$
 unknown naturally suggests values concentrated around $4$ and a small variance.
@@ -232,7 +229,7 @@ irrelevant for large $n$, but critical when the sample is small.</p>
 \[\widehat{\theta} := \sum_{i=1}^n 
 \left( X_i - \overline{X} \right)^2 ,\]
 
-<p>As we have already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let’s re-introduce the following notation:</p>
+<p>As we’ve already seen, the sum looks like an $\ell^2$ norm of something. To make this precise, let’s re-introduce the following notation:</p>
 
 \[\text{the sample vector}\quad
 \boldsymbol{X} =
@@ -250,7 +247,7 @@ X_{n}
 1
 \end{bmatrix}.\]
 
-<p>We can then form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:</p>
+<p>We can form the vector $\boldsymbol{X} - \boldsymbol{1}\overline{X}$, noting that $\overline{X}$ is just a scalar:</p>
 
 \[\boldsymbol{X} - \boldsymbol{1} \overline{X} 
 =
@@ -260,7 +257,7 @@ X_{1} - \overline{X}  \\
 X_{n} - \overline{X} 
 \end{bmatrix}.\]
 
-<p>We can now see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us</p>
+<p>We see that $\widehat{\theta}$ is obtained by summing the squares of the entries of the vector above. That gives us</p>
 
 \[\widehat{\theta}
 =
@@ -276,7 +273,7 @@ X_{n} - \overline{X}
 \left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right)^\top
 \left( \boldsymbol{X} - \boldsymbol{1} \overline{X} \right).\]
 
-<p>We notice that the expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ is meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies</p>
+<p>The expression $\boldsymbol{X} - \boldsymbol{1} \overline{X}$ looks meaningful in some way. It would be neat to have a linear operator $\boldsymbol{P}$ that satisfies</p>
 
 \[\boldsymbol{P} \boldsymbol{X}
 =
@@ -290,7 +287,7 @@ X_{n} - \overline{X}
 =
 \frac{1}{n} \boldsymbol{1}^\top \boldsymbol{X}.\]
 
-<p>Of course, the dot product above could be also described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,</p>
+<p>Of course, the dot product above could also be described as $\boldsymbol{X}^\top \boldsymbol{1}$, but we need $\boldsymbol{X}$ itself not to be transposed. Then,</p>
 
 \[\boldsymbol{X} - \overline{X} \boldsymbol{1}
 =
@@ -341,7 +338,7 @@ X_{n} - \overline{X}
 
 <ol>
   <li>It is symmetric, so $\boldsymbol{P}^\top = \boldsymbol{P}$.</li>
-  <li>It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing, because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.</li>
+  <li>It effectively subtracts the mean (or the center of mass) from a vector. Doing it twice changes nothing because the mean has already been removed after the first pass. Hence, $\boldsymbol{P}^2 = \boldsymbol{P}$.</li>
 </ol>
 
 <p>In other words, it’s an orthogonal projection (as already observed in the previous sections). Thus, we get</p>
@@ -408,7 +405,7 @@ $\mathbf{E} \left[ X_i X_j \right] = \mathbf{E} \left[ X^2 \right]$ and we notic
 
 <p><span class="qed">□</span></p>
 
-<p>In our discussion we are interested in calculating
+<p>In our discussion, we are interested in calculating
 $\mathbf{E} \left[ \boldsymbol{X}^\top \boldsymbol{P} \boldsymbol{X} \right]$.
 This turns out to be quite simple, because the sum of all the entries vanishes. We thus have</p>
 
@@ -422,7 +419,7 @@ This turns out to be quite simple, because the sum of all the entries vanishes. 
 
 <h3 id="appendix-what-if-mu-is-known">Appendix: What if $\mu$ is known?</h3>
 
-<p>Let us follow the same geometric argument. First, we note that</p>
+<p>Let us follow the same geometric argument as above. First, we note that</p>
 
 \[\mathbf{E}[\widehat{\sigma}^2_{\text{$\mu$ known}}]
 =
