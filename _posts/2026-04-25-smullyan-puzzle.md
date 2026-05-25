@@ -124,9 +124,9 @@ $$ \text{Is it true that $x$?} $$
 
 For instance, in one of the examples above we had $x = \text{"2+2=4"}$.
 
-Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.
+The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars (we can actually get two truth-tellers easily by simply asking about $\neg x$ instead of $x$). Let's refer to the truth-telling guardian as $T$ and the lying one as $F$. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the output is exactly the same.
 
-Let's describe this reasoning using our rudimentary formalism. In this framework, it might actually be slightly more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:
+We can describe this reasoning using our rudimentary formalism and make both guardians effectively behave like truth-tellers:
 
 - If we ask $T$, we can simply ask whether $x$ is true.
 
@@ -179,7 +179,7 @@ Since each answer is Yes/No, we can think of it as a single bit of information, 
 
 #### Example
 
-We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his 'mistake', answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let's see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, we could assign:
+We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his 'mistake', answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let's see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, by asking appropriate questions we could effectively assign:
 
 
 $$
@@ -197,7 +197,7 @@ $$
   11 \mapsto \text{One of the Barrels 4 or 5 is poisoned.}
 $$
 
-If the servant answers Yes to both questions, you can still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:
+Now, if the servant answered Yes to both questions, you could still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:
 
 $$
     \begin{aligned}
@@ -365,7 +365,7 @@ The answer leads to the following chain of conclusions:
 
 We are now done, because two questions are enough to determine which of the remaining 4 permutations is correct!
 
-
+<hr>
 <div style="height: 1.0em;"></div>
 
 # Addendum: Is it *a* solution or *the* solution?
@@ -395,7 +395,7 @@ Let's briefly explain why the second condition is necessary. Suppose our questio
 
 $$ \mathcal{S} = \{ (R,F,T) , (F,R,T), (F,T,R)\}. $$
 
-and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that if $G_1$ lies, then necessarily $G_1 = R$. 
+and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that, under the assumptions of Puzzle 3, if $G_1$ lies, then necessarily $G_1 = R$. 
 
 
 <figure style="max-width: 750px; margin: 1.5em auto; text-align: center;">
@@ -408,9 +408,9 @@ and the answer is Yes. The diagram below shows which permutations remain possibl
 </figure>
 
 
-Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. Any of the goddesses may still be $R$, so if we direct the second question, say, to $G_2$, the permutation $(F,R,T)$ always remains possible.
+Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. To see why that happens, let's take a look at the following example:
 
-If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. Since we cannot guarantee that $G_2 \not= R$, at least 3 permutations must still be considered: 1 arising from $G_2=R$ and 2 from $G_2\not=R$. This is too many to resolve with a single remaining question. 
+We direct the second question to $G_2$ (this choice doesn't matter much, because any of the goddesses may still be $R$). That means the permutation $(F,R,T)$ remains possible regardless of the question asked, because $G_2 = R$ is still an option. If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. In the worst case, we only discard a single permutation, leaving us with 3 left. One question is not enough now. We fail.
 
 The same argument applies if we direct the second question to $G_1$ or $G_3$ instead.
 
@@ -426,9 +426,9 @@ In summary, any valid subset $\mathcal{S}$:
 
 - May contain $(R,T,F)$ or not.
 
-- Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$, but not all four.
+- Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$. It must also contain at most 2 permutations in total.
 
-This gives 8 valid first questions in total, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.
+This gives 8 valid first questions, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.
 
 On the other hand, all of these questions serve the same purpose: to quickly isolate a truthful goddess we can rely on. In that sense, whether the puzzle has a 'unique' solution is largely a matter of interpretation.
 

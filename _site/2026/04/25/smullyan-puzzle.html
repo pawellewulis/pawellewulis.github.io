@@ -190,9 +190,9 @@
 
 <p>For instance, in one of the examples above we had $x = \text{“2+2=4”}$.</p>
 
-<p>Let us refer to the truth-telling guardian as $T$ and the lying one as $F$. The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the response must also be false.</p>
+<p>The solution to the two-guardians puzzle revolves around the idea of forcing both guardians to behave like liars (we can actually get two truth-tellers easily by simply asking about $\neg x$ instead of $x$). Let’s refer to the truth-telling guardian as $T$ and the lying one as $F$. If $T$ is asked to answer as $F$ would, the response must be false. On the other hand, if $F$ is asked to answer as $T$ would, the output is exactly the same.</p>
 
-<p>Let’s describe this reasoning using our rudimentary formalism. In this framework, it might actually be slightly more convenient to take the opposite perspective and arrange things so that both guardians effectively behave like truth-tellers:</p>
+<p>We can describe this reasoning using our rudimentary formalism and make both guardians effectively behave like truth-tellers:</p>
 
 <ul>
   <li>
@@ -243,7 +243,7 @@ $$ x = \text{"Guardian A has the key."}$$ -->
 
 <h4 id="example">Example</h4>
 
-<p>We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his ‘mistake’, answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let’s see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, we could assign:</p>
+<p>We have 5 barrels of wine, one of them poisoned. A servant knows which one it is and, eager to undo his ‘mistake’, answers truthfully to any Yes/No question. Are 2 questions enough to identify the poisoned barrel? Let’s see: we only get 2 bits of information, so at most we can distinguish between 4 possible states. For instance, by asking appropriate questions we could effectively assign:</p>
 
 \[\begin{aligned}
         00 &amp;\mapsto \text{Barrel 1 is poisoned.} \\
@@ -256,7 +256,7 @@ $$ x = \text{"Guardian A has the key."}$$ -->
 
 \[11 \mapsto \text{One of the Barrels 4 or 5 is poisoned.}\]
 
-<p>If the servant answers Yes to both questions, you can still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:</p>
+<p>Now, if the servant answered Yes to both questions, you could still safely drink from 3 barrels. Similarly, even a single question is enough to guarantee at least 2 clean barrels by assigning:</p>
 
 \[\begin{aligned}
         0 &amp;\mapsto \text{One of the Barrels 1 or 2 is poisoned.} \\
@@ -411,6 +411,8 @@ $$ x = \text{"Guardian A has the key."}$$ -->
 
 <p>We are now done, because two questions are enough to determine which of the remaining 4 permutations is correct!</p>
 
+<hr />
+
 <div style="height: 1.0em;"></div>
 
 <h1 id="addendum-is-it-a-solution-or-the-solution">Addendum: Is it <em>a</em> solution or <em>the</em> solution?</h1>
@@ -443,7 +445,7 @@ $$ x = \text{"Guardian A has the key."}$$ -->
 
 \[\mathcal{S} = \{ (R,F,T) , (F,R,T), (F,T,R)\}.\]
 
-<p>and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that if $G_1$ lies, then necessarily $G_1 = R$.</p>
+<p>and the answer is Yes. The diagram below shows which permutations remain possible depending on whether the goddess lies or not. Remember that, under the assumptions of Puzzle 3, if $G_1$ lies, then necessarily $G_1 = R$.</p>
 
 <figure style="max-width: 750px; margin: 1.5em auto; text-align: center;">
   <img src="/assets/img/goddesses/goddesses_scenarios.png" alt="Scenarios" style="width: 100%; display: block;" />
@@ -452,9 +454,9 @@ $$ x = \text{"Guardian A has the key."}$$ -->
   </figcaption>
 </figure>
 
-<p>Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. Any of the goddesses may still be $R$, so if we direct the second question, say, to $G_2$, the permutation $(F,R,T)$ always remains possible.</p>
+<p>Now, regardless of the second question, we are not guaranteed to eliminate 2 candidate permutations. To see why that happens, let’s take a look at the following example:</p>
 
-<p>If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. Since we cannot guarantee that $G_2 \not= R$, at least 3 permutations must still be considered: 1 arising from $G_2=R$ and 2 from $G_2\not=R$. This is too many to resolve with a single remaining question.</p>
+<p>We direct the second question to $G_2$ (this choice doesn’t matter much, because any of the goddesses may still be $R$). That means the permutation $(F,R,T)$ remains possible regardless of the question asked, because $G_2 = R$ is still an option. If $G_2 \not= R$, then the answer can at best split the remaining 3 permutations into two groups and eliminate one of them. In the worst case, we only discard a single permutation, leaving us with 3 left. One question is not enough now. We fail.</p>
 
 <p>The same argument applies if we direct the second question to $G_1$ or $G_3$ instead.</p>
 
@@ -474,11 +476,11 @@ $$ x = \text{"Guardian A has the key."}$$ -->
     <p>May contain $(R,T,F)$ or not.</p>
   </li>
   <li>
-    <p>Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$, but not all four.</p>
+    <p>Must contain either the 2 permutations corresponding to $G_2=R$ or the 2 permutations corresponding to $G_3=R$. It must also contain at most 2 permutations in total.</p>
   </li>
 </ul>
 
-<p>This gives 8 valid first questions in total, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.</p>
+<p>This gives 8 valid first questions, so $8/64=12.5 \%$ of all possible choices lead to a complete solution.</p>
 
 <p>On the other hand, all of these questions serve the same purpose: to quickly isolate a truthful goddess we can rely on. In that sense, whether the puzzle has a ‘unique’ solution is largely a matter of interpretation.</p>
 
