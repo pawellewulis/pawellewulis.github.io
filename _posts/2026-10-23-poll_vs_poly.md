@@ -51,7 +51,7 @@ I'm not gonna lie, the resulting sample size turned out to be more disappointing
   </figcaption>
 </figure>
 
-Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead. 
+Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead. 
 
 For the Polymarket, I considered the implied probability at midnight just before the election day.
 
