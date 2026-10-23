@@ -15,7 +15,7 @@ title: "Pollsters vs Polymarket"
   </figcaption> -->
 </figure>
 
-The great battle between statistics against the wisdom of the crowd. Who wins?
+The great battle between statistics and the wisdom of the crowd. Who wins?
 
 Recently, I came across a paper *Are Betting Markets Better than Polling in Predicting Political Elections?* written by Cutting, Hughes-Berheim, Johnson, Baroud, and Brett Goldstein. The authors analyzed the accuracy of polls conducted during the 2024 Trump vs Harris US election and compare it to the probability of winning for each of the candidates implied by Polymarket.
 
