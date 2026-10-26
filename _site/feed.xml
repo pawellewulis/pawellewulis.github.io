@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-10-26T16:23:30+01:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/10/23/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-10-23T00:00:00+02:00</published><updated>2026-10-23T00:00:00+02:00</updated><id>http://localhost:4000/2026/10/23/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/10/23/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-10-26T16:24:22+01:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/10/23/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-10-23T00:00:00+02:00</published><updated>2026-10-23T00:00:00+02:00</updated><id>http://localhost:4000/2026/10/23/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/10/23/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
   <img src="/assets/img/poll_vs_poly/poll_vs_poly.png" alt="Pollsters vs Polymarket" style="width: 100%; display: block;" />
   <!-- <figcaption style="font-size: 0.8em; color: #000;">
     Source: ?
@@ -48,7 +48,7 @@
 
 <p>Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead.</p>
 
-<p>For the Polymarket, I considered the implied probability at midnight just before election day.</p>
+<p>As for Polymarket, I considered the implied probability at midnight just before election day.</p>
 
 <p>It’s worth noting that we compare apples to oranges to an extent. For example, Polymarket might have an unfair advantage because, at midnight, it already “consumed” all the information coming from polls.</p>
 
