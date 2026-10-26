@@ -23,7 +23,7 @@ The case of the US elections suggested that people might have been 'onto somethi
 
 # What are the criteria?
 
-For the sake of simplicity, I decided to include only the 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We've got only 20 samples due to not-so-secret reasons:
+For the sake of simplicity, I decided to restrict my attention to the 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We've got only 20 samples due to not-so-secret reasons:
 
 - There are fewer than 100 countries that are widely considered democratic.
 
@@ -35,7 +35,7 @@ For the sake of simplicity, I decided to include only the 1 vs 1 presidential el
 
 - Sometimes there isn't a Polymarket market for some event (especially true for anything before mid 2024).
 
-Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be "interesting" if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with… 6 examples. 
+Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be "interesting" if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with… 8 examples. 
 
 I'm not gonna lie, the resulting sample size turned out to be more disappointing than I expected. While we can't perform any meaningful statistical analysis here, I was still interested in which side would come on top.
 
@@ -145,7 +145,7 @@ The colours in this table were chosen rather arbitrarily. In the APM column, we 
 
 If I were forced to pick a winner, I would say: neither? As already said, the sample is very limited, but apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen.
 
-I am, however, impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether it happened because of unusual restrictions on pollsters or a massive, rapid shift in sentiment.
+I am, however, impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether it happened because of some unusual restrictions on pollsters or a massive, rapid shift in sentiment.
 
 Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after the election.
 

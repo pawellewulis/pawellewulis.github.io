@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pollsters vs Polymarket | </title>
+
+  <link rel="stylesheet" href="/assets/main.css?v=2">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="alternate"
+        type="application/atom+xml"
+        title=""
+        href="/feed.xml">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script defer data-domain="pavellev.blog" src="https://plausible.io/js/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pollsters vs Polymarket</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-10-23T00:00:00+02:00" itemprop="datePublished">
+        Oct 23, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+  <img src="/assets/img/poll_vs_poly/poll_vs_poly.png" alt="Pollsters vs Polymarket" style="width: 100%; display: block;" />
+  <!-- <figcaption style="font-size: 0.8em; color: #000;">
+    Source: ?
+  </figcaption> -->
+</figure>
+
+<p>The great battle between statistics and the wisdom of the crowd. Who wins?</p>
+
+<p>Recently, I came across a paper <em>Are Betting Markets Better than Polling in Predicting Political Elections?</em> written by Cutting, Hughes-Berheim, Johnson, Baroud, and Brett Goldstein. The authors analyzed the accuracy of polls conducted during the 2024 Trump vs Harris US election and compare it to the probability of winning for each of the candidates implied by Polymarket.</p>
+
+<p>The case of the US elections suggested that people might have been ‘onto something’ and perhaps were (consciously or not) aware of some subtleties undetectable via traditional polling methods. On the other hand, though, they might’ve simply been lucky. I genuinely couldn’t tell, so I decided to put this hypothesis to a little test.</p>
+
+<h1 id="what-are-the-criteria">What are the criteria?</h1>
+
+<p>For the sake of simplicity, I decided to restrict my attention to the 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We’ve got only 20 samples due to not-so-secret reasons:</p>
+
+<ul>
+  <li>
+    <p>There are fewer than 100 countries that are widely considered democratic.</p>
+  </li>
+  <li>
+    <p>Some democratic countries are monarchies.</p>
+  </li>
+  <li>
+    <p>In many democratic countries, the president is chosen by a parliament or another institution.</p>
+  </li>
+  <li>
+    <p>In some cases, a presidential election might get resolved without a 1 vs 1.</p>
+  </li>
+  <li>
+    <p>Sometimes there isn’t a Polymarket market for some event (especially true for anything before mid 2024).</p>
+  </li>
+</ul>
+
+<p>Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be “interesting” if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with… 8 examples.</p>
+
+<p>I’m not gonna lie, the resulting sample size turned out to be more disappointing than I expected. While we can’t perform any meaningful statistical analysis here, I was still interested in which side would come on top.</p>
+
+<h1 id="results">Results</h1>
+
+<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+  <img src="/assets/img/poll_vs_poly/poly_week.png" alt="Polymarket Probs" style="width: 100%; display: block;" />
+  <figcaption style="font-size: 0.8em; color: #000;">
+    Source: Polymarket data
+  </figcaption>
+</figure>
+
+<p>Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead.</p>
+
+<p>For the Polymarket, I considered the implied probability at midnight just before the election day.</p>
+
+<p>The colours in this table were chosen rather arbitrarily. In the APM column, we award the yellow label to those within 1 pp. of 50%. As for the Polymarket columns, I wasn’t exactly certain whether Romania’s 46.5% should be yellow or red, but eventually I went with red.</p>
+
+<table style="width:100%; table-layout:fixed;">
+
+  <colgroup>
+    <col style="width:25%;" />
+    <col style="width:25%;" />
+    <col style="width:25%;" />
+    <col style="width:25%;" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th align="center">Polymarket Implied Probability</th>
+      <th align="center">Adjusted Polling Margin</th>
+      <th align="center">Winner</th>
+    </tr>
+  </thead>
+ <tbody>
+  <tr>
+    <td>Slovakia</td>
+    <td align="center" style="background-color:#fff2cc;">50.0%</td>
+    <td align="center" style="background-color:#f4cccc;">−1.05 pp</td>
+    <td align="center">Polymarket</td>
+  </tr>
+
+  <tr>
+    <td>USA (popular vote)*</td>
+    <td align="center" style="background-color:#f4cccc;">26.3%</td>
+    <td align="center" style="background-color:#fff2cc;">−0.67 pp</td>
+    <td align="center">Pollsters</td>
+  </tr>
+
+  <tr>
+    <td>Equador</td>
+    <td align="center" style="background-color:#f4cccc;">42.5%</td>
+    <td align="center" style="background-color:#f4cccc;">−1.27 pp</td>
+    <td align="center">Neither</td>
+  </tr>
+
+  <tr>
+    <td>Romania</td>
+    <td align="center" style="background-color:#f4cccc;">46.5%</td>
+    <td align="center" style="background-color:#f4cccc;">−1.38 pp</td>
+    <td align="center">Neither</td>
+  </tr>
+
+  <tr>
+    <td>Poland</td>
+    <td align="center" style="background-color:#f4cccc;">36.2%</td>
+    <td align="center" style="background-color:#fff2cc;">−0.55 pp</td>
+    <td align="center">Pollsters</td>
+  </tr>
+
+  <tr>
+    <td>Seychelles</td>
+    <td align="center" style="background-color:#d9ead3;">74.0%</td>
+    <td align="center" style="background-color:#fff2cc;">**</td>
+    <td align="center">Polymarket by W.O.</td>
+  </tr>
+
+  <tr>
+    <td>Bolivia</td>
+    <td align="center" style="background-color:#d9ead3;">53.6%</td>
+    <td align="center" style="background-color:#f4cccc;">−7.95 pp</td>
+    <td align="center">Polymarket</td>
+  </tr>
+
+  <tr>
+    <td>Colombia</td>
+    <td align="center" style="background-color:#d9ead3;">83.5%</td>
+    <td align="center" style="background-color:#d9ead3;">7.75 pp</td>
+    <td align="center">Tie</td>
+  </tr>
+</tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">
+        <small><sup>*</sup>  Not exactly a proper 1v1. </small>
+        <br />
+        <small><sup>**</sup> There was no reputable runoff poll for Seychelles.</small>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>If I were forced to pick a winner, I would say: neither? As already said, the sample is very limited, but apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen.</p>
+
+<p>I am, however, impressed by how well Polymarket fared in Bolivia’s case. I am far from an expert on Bolivian politics, so I can’t tell whether it happened because of some unusual restrictions on pollsters or a massive, rapid shift in sentiment.</p>
+
+<p>Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after the election.</p>
+
+<p>Honorable mention goes to Poland for the most dramatic swing.</p>
+
+  </div>
+
+
+
+<!-- Share bar -->
+<div class="share-bar" aria-label="Share this post">
+  <span class="share-label">Share</span>
+
+  <button class="share-button" type="button" data-platform="x" aria-label="Share on X" title="Share on X">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.831L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.292 19.492h2.039L6.486 3.24H4.298l13.311 17.405z"/>
+      </svg>
+    </span>
+  </button>
+
+  <button class="share-button" type="button" data-platform="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+      </svg>
+    </span>
+  </button>
+
+  <button class="share-button" type="button" data-platform="facebook" aria-label="Share on Facebook" title="Share on Facebook">
+    <span class="share-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.438H7.078v-3.489h3.047V9.414c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.971h-1.514c-1.491 0-1.955.931-1.955 1.887v2.262h3.328l-.532 3.489h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll(".share-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+      const platform = button.dataset.platform;
+
+      const shareUrls = {
+        x: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+      };
+
+      window.open(shareUrls[platform], "_blank", "noopener,noreferrer");
+    });
+  });
+</script>
+
+
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Paweł</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
