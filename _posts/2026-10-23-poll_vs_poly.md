@@ -149,7 +149,7 @@ The colours in this table were chosen rather arbitrarily. In the APM column, we 
 
 I'll leave the final verdict to the reader. If I were forced to claim anything more concrete, I'd point out that apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen. Of course, the sample size is bordeline non-existent, so any confidence here would be premature.
 
-I am, however, genuinely impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether it happened because of unusual restrictions on pollsters or a massive, rapid shift in sentiment.
+I am, however, genuinely impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether the source of the discrepancy is some unusual restriction imposed upon pollsters or a massive, rapid shift in sentiment.
 
 Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after election day when an "80% to ~25% to 70%" rollercoaster occurred. 
 
