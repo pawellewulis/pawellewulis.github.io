@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-10-26T13:46:50+01:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/10/23/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-10-23T00:00:00+02:00</published><updated>2026-10-23T00:00:00+02:00</updated><id>http://localhost:4000/2026/10/23/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/10/23/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-10-26T16:23:30+01:00</updated><id>http://localhost:4000/feed.xml</id><author><name>Paweł</name></author><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/10/23/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-10-23T00:00:00+02:00</published><updated>2026-10-23T00:00:00+02:00</updated><id>http://localhost:4000/2026/10/23/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/10/23/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
   <img src="/assets/img/poll_vs_poly/poll_vs_poly.png" alt="Pollsters vs Polymarket" style="width: 100%; display: block;" />
   <!-- <figcaption style="font-size: 0.8em; color: #000;">
     Source: ?
   </figcaption> -->
 </figure>
 
-<p>The great battle between statistics and the wisdom of the crowd. Who wins?</p>
+<p>The great battle between statistics against the wisdom of the crowd. Who wins?</p>
 
 <p>Recently, I came across a paper <em>Are Betting Markets Better than Polling in Predicting Political Elections?</em> written by Cutting, Hughes-Berheim, Johnson, Baroud, and Brett Goldstein. The authors analyzed the accuracy of polls conducted during the 2024 Trump vs Harris US election and compare it to the probability of winning for each of the candidates implied by Polymarket.</p>
 
@@ -13,7 +13,7 @@
 
 <h1 id="what-are-the-criteria">What are the criteria?</h1>
 
-<p>For the sake of simplicity, I decided to restrict my attention to the 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We’ve got only 20 samples due to not-so-secret reasons:</p>
+<p>For the sake of simplicity, I decided to restrict my attention to 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We’ve got only 20 samples due to not-so-secret reasons:</p>
 
 <ul>
   <li>
@@ -35,7 +35,7 @@
 
 <p>Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be “interesting” if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with… 8 examples.</p>
 
-<p>I’m not gonna lie, the resulting sample size turned out to be more disappointing than I expected. While we can’t perform any meaningful statistical analysis here, I was still interested in which side would come on top.</p>
+<p>I’m not gonna lie, the resulting sample size turned out to be more disappointing than I expected. While we can’t perform any reasonable statistical analysis here, I was still interested in which side would come on top.</p>
 
 <h1 id="results">Results</h1>
 
@@ -48,7 +48,11 @@
 
 <p>Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead.</p>
 
-<p>For the Polymarket, I considered the implied probability at midnight just before the election day.</p>
+<p>For the Polymarket, I considered the implied probability at midnight just before election day.</p>
+
+<p>It’s worth noting that we compare apples to oranges to an extent. For example, Polymarket might have an unfair advantage because, at midnight, it already “consumed” all the information coming from polls.</p>
+
+<p>Another issue is actually even more fundamental: the percentages measure two very different things. If, for instance, we <b><i>know with certainty </i></b> that Candidate A in some country X is supposed to get 51%, then his Polymarket probability should collapse to 100% while the polls themselves might still point at around 51%. Theoretically, if the sample was of any decent size, we could perhaps use the logistic regression to see if there is any concrete relationship between these two numbers.</p>
 
 <p>The colours in this table were chosen rather arbitrarily. In the APM column, we award the yellow label to those within 1 pp. of 50%. As for the Polymarket columns, I wasn’t exactly certain whether Romania’s 46.5% should be yellow or red, but eventually I went with red.</p>
 
@@ -137,13 +141,13 @@
   </tfoot>
 </table>
 
-<p>If I were forced to pick a winner, I would say: neither? As already said, the sample is very limited, but apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen.</p>
+<p>I’ll leave the final verdict to the reader. If I were forced to claim anything more concrete, I’d point out that apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen. Of course, the sample size is bordeline non-existent, so any confidence here would be premature.</p>
 
-<p>I am, however, impressed by how well Polymarket fared in Bolivia’s case. I am far from an expert on Bolivian politics, so I can’t tell whether it happened because of some unusual restrictions on pollsters or a massive, rapid shift in sentiment.</p>
+<p>I am, however, genuinely impressed by how well Polymarket fared in Bolivia’s case. I am far from an expert on Bolivian politics, so I can’t tell whether it happened because of unusual restrictions on pollsters or a massive, rapid shift in sentiment.</p>
 
-<p>Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after the election.</p>
+<p>Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after election day when an “80% to ~25% to 70%” rollercoaster occurred.</p>
 
-<p>Honorable mention goes to Poland for the most dramatic swing.</p>]]></content><author><name>Paweł</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/05/28/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-05-28T00:00:00+02:00</published><updated>2026-05-28T00:00:00+02:00</updated><id>http://localhost:4000/2026/05/28/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/05/28/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
+<p>Honorable mention goes to Poland for the most dramatic upswing.</p>]]></content><author><name>Paweł</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Pollsters vs Polymarket</title><link href="http://localhost:4000/2026/05/28/poll_vs_poly.html" rel="alternate" type="text/html" title="Pollsters vs Polymarket" /><published>2026-05-28T00:00:00+02:00</published><updated>2026-05-28T00:00:00+02:00</updated><id>http://localhost:4000/2026/05/28/poll_vs_poly</id><content type="html" xml:base="http://localhost:4000/2026/05/28/poll_vs_poly.html"><![CDATA[<figure style="max-width: 800px; margin: 1.5em auto; text-align: right;">
   <img src="/assets/img/poll_vs_poly/poll_vs_poly.png" alt="Pollsters vs Polymarket" style="width: 100%; display: block;" />
   <!-- <figcaption style="font-size: 0.8em; color: #000;">
     Source: ?

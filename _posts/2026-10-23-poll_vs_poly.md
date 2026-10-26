@@ -15,7 +15,7 @@ title: "Pollsters vs Polymarket"
   </figcaption> -->
 </figure>
 
-The great battle between statistics and the wisdom of the crowd. Who wins?
+The great battle between statistics against the wisdom of the crowd. Who wins?
 
 Recently, I came across a paper *Are Betting Markets Better than Polling in Predicting Political Elections?* written by Cutting, Hughes-Berheim, Johnson, Baroud, and Brett Goldstein. The authors analyzed the accuracy of polls conducted during the 2024 Trump vs Harris US election and compare it to the probability of winning for each of the candidates implied by Polymarket.
 
@@ -23,7 +23,7 @@ The case of the US elections suggested that people might have been 'onto somethi
 
 # What are the criteria?
 
-For the sake of simplicity, I decided to restrict my attention to the 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We've got only 20 samples due to not-so-secret reasons:
+For the sake of simplicity, I decided to restrict my attention to 1 vs 1 presidential elections that took place since 2024 and were decided by nationwide voting. We've got only 20 samples due to not-so-secret reasons:
 
 - There are fewer than 100 countries that are widely considered democratic.
 
@@ -53,7 +53,11 @@ I'm not gonna lie, the resulting sample size turned out to be more disappointing
 
 Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead. 
 
-As for Polymarket, I considered the implied probability at midnight just before the election day.
+For the Polymarket, I considered the implied probability at midnight just before election day. 
+
+It's worth noting that we compare apples to oranges to an extent. For example, Polymarket might have an unfair advantage because, at midnight, it already "consumed" all the information coming from polls. 
+
+Another issue is actually even more fundamental: the percentages measure two very different things. If, for instance, we <b><i>know with certainty </i></b> that Candidate A in some country X is supposed to get 51%, then his Polymarket probability should collapse to 100% while the polls themselves might still point at around 51%. Theoretically, if the sample was of any decent size, we could perhaps use the logistic regression to see if there is any concrete relationship between these two numbers.
 
 The colours in this table were chosen rather arbitrarily. In the APM column, we award the yellow label to those within 1 pp. of 50%. As for the Polymarket columns, I wasn't exactly certain whether Romania's 46.5% should be yellow or red, but eventually I went with red.
 
@@ -143,10 +147,10 @@ The colours in this table were chosen rather arbitrarily. In the APM column, we 
   </tfoot>
 </table>
 
-If I were forced to pick a winner, I would say: neither? As already said, the sample is very limited, but apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen.
+I'll leave the final verdict to the reader. If I were forced to claim anything more concrete, I'd point out that apparently if the chances look roughly 50/50, they might indeed be 50/50, and no one truly knows what will happen. Of course, the sample size is bordeline non-existent, so any confidence here would be premature.
 
-I am, however, impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether it happened because of some unusual restrictions on pollsters or a massive, rapid shift in sentiment.
+I am, however, genuinely impressed by how well Polymarket fared in Bolivia's case. I am far from an expert on Bolivian politics, so I can't tell whether it happened because of unusual restrictions on pollsters or a massive, rapid shift in sentiment.
 
-Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after the election.
+Another interesting case is Peru, where the wave function of Polymarket failed to collapse even a full day after election day when an "80% to ~25% to 70%" rollercoaster occurred. 
 
-Honorable mention goes to Poland for the most dramatic swing.
+Honorable mention goes to Poland for the most dramatic upswing.
