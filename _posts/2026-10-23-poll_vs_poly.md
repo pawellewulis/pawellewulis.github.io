@@ -53,7 +53,7 @@ I'm not gonna lie, the resulting sample size turned out to be more disappointing
 
 Below, <b>Adjusted Polling Margin</b> represents the average advantage of the winning candidate in the runoff election polls, with the two most extreme measurements discarded. Of course, there are no runoff elections in the US, so I had to make a compromise and consider the final polling averages instead. 
 
-For the Polymarket, I considered the implied probability at midnight just before the election day.
+As for Polymarket, I considered the implied probability at midnight just before the election day.
 
 The colours in this table were chosen rather arbitrarily. In the APM column, we award the yellow label to those within 1 pp. of 50%. As for the Polymarket columns, I wasn't exactly certain whether Romania's 46.5% should be yellow or red, but eventually I went with red.
 
