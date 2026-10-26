@@ -35,7 +35,7 @@ For the sake of simplicity, I decided to restrict my attention to the 1 vs 1 pre
 
 - Sometimes there isn't a Polymarket market for some event (especially true for anything before mid 2024).
 
-Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be "interesting" if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with… 8 examples. 
+Another obstacle is that in some cases one candidate had such an enormous advantage that a victory was almost trivial to foresee. If we define a 1 vs 1 election to be "interesting" if no candidate has an implied probability of winning exceeding 90% (Polymarket, the election day midnight), then we are left with... 8 examples. 
 
 I'm not gonna lie, the resulting sample size turned out to be more disappointing than I expected. While we can't perform any meaningful statistical analysis here, I was still interested in which side would come on top.
 
